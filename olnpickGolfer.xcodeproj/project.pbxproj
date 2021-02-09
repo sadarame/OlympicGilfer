@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF225D2CCD000CB172A /* AppDelegate.swift */; };
+		16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */; };
+		16DA3AF725D2CCD000CB172A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF625D2CCD000CB172A /* ContentView.swift */; };
+		16DA3AF925D2CCD100CB172A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AF825D2CCD100CB172A /* Assets.xcassets */; };
+		16DA3AFC25D2CCD100CB172A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AFB25D2CCD100CB172A /* Preview Assets.xcassets */; };
+		16DA3AFF25D2CCD100CB172A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */; };
+		16DA3B0A25D2CCD200CB172A /* olnpickGolferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B0925D2CCD200CB172A /* olnpickGolferTests.swift */; };
+		16DA3B1525D2CCD200CB172A /* olnpickGolferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16DA3B0625D2CCD200CB172A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16DA3AE725D2CCCF00CB172A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16DA3AEE25D2CCD000CB172A;
+			remoteInfo = olnpickGolfer;
+		};
+		16DA3B1125D2CCD200CB172A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16DA3AE725D2CCCF00CB172A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16DA3AEE25D2CCD000CB172A;
+			remoteInfo = olnpickGolfer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16DA3AEF25D2CCD000CB172A /* olnpickGolfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = olnpickGolfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DA3AF225D2CCD000CB172A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		16DA3AF625D2CCD000CB172A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16DA3AF825D2CCD100CB172A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16DA3AFB25D2CCD100CB172A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16DA3AFE25D2CCD100CB172A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16DA3B0025D2CCD100CB172A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16DA3B0525D2CCD200CB172A /* olnpickGolferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = olnpickGolferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DA3B0925D2CCD200CB172A /* olnpickGolferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = olnpickGolferTests.swift; sourceTree = "<group>"; };
+		16DA3B0B25D2CCD200CB172A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16DA3B1025D2CCD200CB172A /* olnpickGolferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = olnpickGolferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = olnpickGolferUITests.swift; sourceTree = "<group>"; };
+		16DA3B1625D2CCD200CB172A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16DA3AEC25D2CCD000CB172A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DA3B0225D2CCD200CB172A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DA3B0D25D2CCD200CB172A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16DA3AE625D2CCCF00CB172A = {
+			isa = PBXGroup;
+			children = (
+				16DA3AF125D2CCD000CB172A /* olnpickGolfer */,
+				16DA3B0825D2CCD200CB172A /* olnpickGolferTests */,
+				16DA3B1325D2CCD200CB172A /* olnpickGolferUITests */,
+				16DA3AF025D2CCD000CB172A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16DA3AF025D2CCD000CB172A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16DA3AEF25D2CCD000CB172A /* olnpickGolfer.app */,
+				16DA3B0525D2CCD200CB172A /* olnpickGolferTests.xctest */,
+				16DA3B1025D2CCD200CB172A /* olnpickGolferUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16DA3AF125D2CCD000CB172A /* olnpickGolfer */ = {
+			isa = PBXGroup;
+			children = (
+				16DA3AF225D2CCD000CB172A /* AppDelegate.swift */,
+				16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */,
+				16DA3AF625D2CCD000CB172A /* ContentView.swift */,
+				16DA3AF825D2CCD100CB172A /* Assets.xcassets */,
+				16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */,
+				16DA3B0025D2CCD100CB172A /* Info.plist */,
+				16DA3AFA25D2CCD100CB172A /* Preview Content */,
+			);
+			path = olnpickGolfer;
+			sourceTree = "<group>";
+		};
+		16DA3AFA25D2CCD100CB172A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16DA3AFB25D2CCD100CB172A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16DA3B0825D2CCD200CB172A /* olnpickGolferTests */ = {
+			isa = PBXGroup;
+			children = (
+				16DA3B0925D2CCD200CB172A /* olnpickGolferTests.swift */,
+				16DA3B0B25D2CCD200CB172A /* Info.plist */,
+			);
+			path = olnpickGolferTests;
+			sourceTree = "<group>";
+		};
+		16DA3B1325D2CCD200CB172A /* olnpickGolferUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */,
+				16DA3B1625D2CCD200CB172A /* Info.plist */,
+			);
+			path = olnpickGolferUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16DA3AEE25D2CCD000CB172A /* olnpickGolfer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16DA3B1925D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolfer" */;
+			buildPhases = (
+				16DA3AEB25D2CCD000CB172A /* Sources */,
+				16DA3AEC25D2CCD000CB172A /* Frameworks */,
+				16DA3AED25D2CCD000CB172A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = olnpickGolfer;
+			productName = olnpickGolfer;
+			productReference = 16DA3AEF25D2CCD000CB172A /* olnpickGolfer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16DA3B0425D2CCD200CB172A /* olnpickGolferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16DA3B1C25D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolferTests" */;
+			buildPhases = (
+				16DA3B0125D2CCD200CB172A /* Sources */,
+				16DA3B0225D2CCD200CB172A /* Frameworks */,
+				16DA3B0325D2CCD200CB172A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16DA3B0725D2CCD200CB172A /* PBXTargetDependency */,
+			);
+			name = olnpickGolferTests;
+			productName = olnpickGolferTests;
+			productReference = 16DA3B0525D2CCD200CB172A /* olnpickGolferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16DA3B0F25D2CCD200CB172A /* olnpickGolferUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16DA3B1F25D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolferUITests" */;
+			buildPhases = (
+				16DA3B0C25D2CCD200CB172A /* Sources */,
+				16DA3B0D25D2CCD200CB172A /* Frameworks */,
+				16DA3B0E25D2CCD200CB172A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16DA3B1225D2CCD200CB172A /* PBXTargetDependency */,
+			);
+			name = olnpickGolferUITests;
+			productName = olnpickGolferUITests;
+			productReference = 16DA3B1025D2CCD200CB172A /* olnpickGolferUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16DA3AE725D2CCCF00CB172A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					16DA3AEE25D2CCD000CB172A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					16DA3B0425D2CCD200CB172A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 16DA3AEE25D2CCD000CB172A;
+					};
+					16DA3B0F25D2CCD200CB172A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 16DA3AEE25D2CCD000CB172A;
+					};
+				};
+			};
+			buildConfigurationList = 16DA3AEA25D2CCCF00CB172A /* Build configuration list for PBXProject "olnpickGolfer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16DA3AE625D2CCCF00CB172A;
+			productRefGroup = 16DA3AF025D2CCD000CB172A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16DA3AEE25D2CCD000CB172A /* olnpickGolfer */,
+				16DA3B0425D2CCD200CB172A /* olnpickGolferTests */,
+				16DA3B0F25D2CCD200CB172A /* olnpickGolferUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16DA3AED25D2CCD000CB172A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DA3AFF25D2CCD100CB172A /* LaunchScreen.storyboard in Resources */,
+				16DA3AFC25D2CCD100CB172A /* Preview Assets.xcassets in Resources */,
+				16DA3AF925D2CCD100CB172A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DA3B0325D2CCD200CB172A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DA3B0E25D2CCD200CB172A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16DA3AEB25D2CCD000CB172A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */,
+				16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */,
+				16DA3AF725D2CCD000CB172A /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DA3B0125D2CCD200CB172A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DA3B0A25D2CCD200CB172A /* olnpickGolferTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DA3B0C25D2CCD200CB172A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DA3B1525D2CCD200CB172A /* olnpickGolferUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16DA3B0725D2CCD200CB172A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16DA3AEE25D2CCD000CB172A /* olnpickGolfer */;
+			targetProxy = 16DA3B0625D2CCD200CB172A /* PBXContainerItemProxy */;
+		};
+		16DA3B1225D2CCD200CB172A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16DA3AEE25D2CCD000CB172A /* olnpickGolfer */;
+			targetProxy = 16DA3B1125D2CCD200CB172A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16DA3AFE25D2CCD100CB172A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16DA3B1725D2CCD200CB172A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16DA3B1825D2CCD200CB172A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16DA3B1A25D2CCD200CB172A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"olnpickGolfer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = olnpickGolfer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olnpickGolfer.olnpickGolfer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16DA3B1B25D2CCD200CB172A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"olnpickGolfer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = olnpickGolfer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olnpickGolfer.olnpickGolfer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16DA3B1D25D2CCD200CB172A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = olnpickGolferTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olnpickGolfer.olnpickGolferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/olnpickGolfer.app/olnpickGolfer";
+			};
+			name = Debug;
+		};
+		16DA3B1E25D2CCD200CB172A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = olnpickGolferTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olnpickGolfer.olnpickGolferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/olnpickGolfer.app/olnpickGolfer";
+			};
+			name = Release;
+		};
+		16DA3B2025D2CCD200CB172A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = olnpickGolferUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olnpickGolfer.olnpickGolferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = olnpickGolfer;
+			};
+			name = Debug;
+		};
+		16DA3B2125D2CCD200CB172A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = olnpickGolferUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olnpickGolfer.olnpickGolferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = olnpickGolfer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16DA3AEA25D2CCCF00CB172A /* Build configuration list for PBXProject "olnpickGolfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16DA3B1725D2CCD200CB172A /* Debug */,
+				16DA3B1825D2CCD200CB172A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16DA3B1925D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16DA3B1A25D2CCD200CB172A /* Debug */,
+				16DA3B1B25D2CCD200CB172A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16DA3B1C25D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16DA3B1D25D2CCD200CB172A /* Debug */,
+				16DA3B1E25D2CCD200CB172A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16DA3B1F25D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolferUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16DA3B2025D2CCD200CB172A /* Debug */,
+				16DA3B2125D2CCD200CB172A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16DA3AE725D2CCCF00CB172A /* Project object */;
+}
