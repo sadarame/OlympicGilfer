@@ -15,6 +15,7 @@
 		16DA3AFF25D2CCD100CB172A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */; };
 		16DA3B0A25D2CCD200CB172A /* olnpickGolferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B0925D2CCD200CB172A /* olnpickGolferTests.swift */; };
 		16DA3B1525D2CCD200CB172A /* olnpickGolferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */; };
+		16DA3B3325D3EEB900CB172A /* inputDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B3225D3EEB800CB172A /* inputDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		16DA3B1025D2CCD200CB172A /* olnpickGolferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = olnpickGolferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = olnpickGolferUITests.swift; sourceTree = "<group>"; };
 		16DA3B1625D2CCD200CB172A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16DA3B3225D3EEB800CB172A /* inputDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				16DA3AF225D2CCD000CB172A /* AppDelegate.swift */,
 				16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */,
 				16DA3AF625D2CCD000CB172A /* ContentView.swift */,
+				16DA3B3225D3EEB800CB172A /* inputDialog.swift */,
 				16DA3AF825D2CCD100CB172A /* Assets.xcassets */,
 				16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */,
 				16DA3B0025D2CCD100CB172A /* Info.plist */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DA3B3325D3EEB900CB172A /* inputDialog.swift in Sources */,
 				16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */,
 				16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */,
 				16DA3AF725D2CCD000CB172A /* ContentView.swift in Sources */,
