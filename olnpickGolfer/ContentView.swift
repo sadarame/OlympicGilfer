@@ -17,95 +17,86 @@ struct ContentView: View {
     @State private var selectionValue: Set<String>
         = []
     @State var searchArray = [String]()
-    @EnvironmentObject var model: Model
+    
+    @State private var isShowing = false
     
     var body: some View {
         
-        NavigationView {
-            
-            VStack {
-                TextField("検索", text: $name,onCommit: {
+        VStack {
+            TextField("検索", text: $name,onCommit: {
+                item = getDataName()
+                
+                if self.name == "" {
                     item = getDataName()
-                    
-                    if self.name == "" {
-                        item = getDataName()
-                    } else {
-                        self.searchArray = item.filter{
-                            if $0.localizedCaseInsensitiveContains(name){
-                                return true
-                            }
-                            return false
+                } else {
+                    self.searchArray = item.filter{
+                        if $0.localizedCaseInsensitiveContains(name){
+                            return true
                         }
-                        item = searchArray
+                        return false
                     }
-                })
-                .padding()
-                
-                // 入力域のまわりを枠で囲む
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                List (selection: $selectionValue) {
-                    ForEach(item, id: \.self) { item in
-                        Text(item)
-                    }
+                    item = searchArray
                 }
-                .environment(\.editMode, .constant(.active))
-                
+            }).padding()
+            // 入力域のまわりを枠で囲む
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            List (selection: $selectionValue) {
+                ForEach(item, id: \.self) { item in
+                    Text(item)
+                }
+            }.environment(\.editMode, .constant(.active))
+            
+            Spacer()
+            
+            HStack {
+                //追加ボタン
+                Button("追加") { isShowingAlert = true }.padding()
+                //削除ボタン制御
+                if !item.isEmpty {
+                    Button("削除") {
+                        rowRemove(delList: selectionValue)
+                        selectionValue = []
+                    }
+                    .padding()
+                }
                 Spacer()
-                
-                HStack {
-                    Button("追加") { isShowingAlert = true }
-                        .padding()
-                    
-                    if !item.isEmpty {
-                        Button("削除") {
-                            rowRemove(delList: selectionValue)
-                            selectionValue = []
-                        }
-                        .padding()
+                //次へボタン
+                Button("次へ") {
+                    if inputCheck(selectedList: selectionValue) {
+                        isShowing = true
+                    } else {
+                        self.showingAlert = true
                     }
-                    
-                    Spacer()
-                    
-                    NavigationLink(destination: InputScoreUIView(), isActive: self.$model.secondViewPushed) {
-                        Button(action: {
-                            self.model.secondViewPushed = true
-                        }) {
-                            Text("次へ")
-                        }
-                        .padding()
-                    }
-                    
-                    TextFieldAlertView(
-                        text: $text,
-                        isShowingAlert: $isShowingAlert,
-                        placeholder: "",
-                        isSecureTextEntry: false,
-                        title: "名前登録",
-                        message: "名前を入力してください",
-                        leftButtonTitle: "キャンセル",
-                        rightButtonTitle: "登録",
-                        leftButtonAction: nil,
-                        rightButtonAction: {
-                            if item.contains(text) {
-                                alertD()
-                            } else {
-                                registDataName(name: text)
-                                text = ""
-                                item = getDataName()
-                            }
-                        }
-                    )
-                    .frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    
+                }.fullScreenCover(isPresented: $isShowing) {
+                    InputScoreUIView(isActive: $isShowing)
+                }.alert(isPresented: $showingAlert) {
+                    Alert(title: Text("入力エラー"),message: Text("二人以上選択してください"))
                 }
+                
+                //名前入力ダイアログ
+                TextFieldAlertView(
+                    text: $text,
+                    isShowingAlert: $isShowingAlert,
+                    placeholder: "",
+                    isSecureTextEntry: false,
+                    title: "名前登録",
+                    message: "名前を入力してください",
+                    leftButtonTitle: "キャンセル",
+                    rightButtonTitle: "登録",
+                    leftButtonAction: nil,
+                    rightButtonAction: {
+                        if item.contains(text) {
+                            alertD()
+                        } else {
+                            registDataName(name: text)
+                            text = ""
+                            item = getDataName()
+                        }
+                    }
+                ).frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
         }
-        .navigationTitle("タイトル")
-        .navigationBarHidden(true)
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
-        
     }
     
     func rowRemove(delList:Set<String>) {
@@ -132,6 +123,16 @@ struct ContentView: View {
         reWriteDataName(nameList: tmpItem)
         item = getDataName()
         self.name = ""
+    }
+    
+    func inputCheck(selectedList:Set<String>)->Bool{
+        var rtVal:Bool
+        if selectedList.count <= 1 {
+            rtVal =  false
+        } else {
+            rtVal = true
+        }
+        return rtVal
     }
 }
 

@@ -31,3 +31,12 @@ func getDataName() -> Array<String> {
         return []
     }
 }
+
+func setViewStatus(viewStutusCode:String) {
+    UserDefaults.standard.setValue(viewStutusCode, forKey: Const.viewStatusKey)
+}
+
+func getViewStatus() -> String? {
+    return UserDefaults.standard.string(forKey: Const.viewStatusKey)
+    
+}

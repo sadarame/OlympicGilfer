@@ -15,5 +15,11 @@ struct Monster: Equatable {
 
 struct Const {
     static let nameKey = "name"
+    static let viewStatusKey = "status"
+    
+    //ViewStatus
+    static let inputNameView = "1"
+    static let inputScoreView = "2"
+    static let resultScoreView = "3"
 }
 
