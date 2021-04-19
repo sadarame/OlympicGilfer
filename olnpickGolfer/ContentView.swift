@@ -65,6 +65,8 @@ struct ContentView: View {
                 Button("次へ") {
                     if inputCheck(selectedList: selectionValue) {
                         isShowing = true
+                        //選択した値を保存する処理
+                        
                     } else {
                         self.showingAlert = true
                     }

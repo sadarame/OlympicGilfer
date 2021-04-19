@@ -14,6 +14,40 @@ struct InputScoreUIView: View {
             HStack {
                 Spacer()
                 VStack {
+                    HStack{
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                    }
+                    HStack{
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                    }
+                    HStack{
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                        Label("切り取り", systemImage: "scissors")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.green)
+                    }
+                    
                     Spacer()
                     Text("Modal View").padding()
                     Button("Close Modal") {
