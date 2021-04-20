@@ -21,7 +21,7 @@ struct UIControllerView: View {
                 FirstSettingUIView(viewCode: $viewCode)
                 
             case Const.inputNameViewCode :
-                SelectConpanionUIView(viewCode: $viewCode)
+                MemberSelectUIView(viewCode: $viewCode)
                 
             case Const.inputScoreViewCode:
                 ScoreBoardUIView(viewCode: $viewCode)
@@ -30,7 +30,7 @@ struct UIControllerView: View {
             
 
             default :
-                SelectConpanionUIView(viewCode: $viewCode)
+                MemberSelectUIView(viewCode: $viewCode)
             }
         }
     }

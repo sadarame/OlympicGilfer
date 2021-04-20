@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectConpanionUIView: View {
+struct MemberSelectUIView: View {
     
     @State private var name:String = ""
     @State private var item = getDataName()
@@ -17,6 +17,9 @@ struct SelectConpanionUIView: View {
     @State private var selectionValue: Set<String>
         = []
     @State var searchArray = [String]()
+    
+     
+    
     
     @State private var isShowing = false
     
@@ -72,12 +75,13 @@ struct SelectConpanionUIView: View {
                     if inputCheck(selectedList: selectionValue) {
                         isShowing = true
                         //TODO 選択した値を保存する処理
+                        setMembers(selectedList: selectionValue)
                         viewCode = Const.inputScoreViewCode
                         
                     } else {
                         self.showingAlert = true
                     }
-    
+                    
                     
                 }.alert(isPresented: $showingAlert) {
                     Alert(title: Text("入力エラー"),message: Text("１〜３人を選択してください"))
@@ -106,6 +110,27 @@ struct SelectConpanionUIView: View {
                 ).frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
         }
+    }
+    
+    
+    
+    func setMembers(selectedList:Set<String>){
+        //主キー生成
+        let id: String = NSUUID().uuidString
+        let roundData = RoundData()
+        
+        roundData.roundId = id
+        roundData.peoples = selectedList.count
+        
+        var playersScores = [PlayerlScore]()
+        
+        for seleted in selectedList {
+            let playerlScore = PlayerlScore()
+            playerlScore.roundId = id
+            playerlScore.playerName = seleted
+            playersScores.append(playerlScore)
+        }
+        
     }
     
     //同伴者追加
@@ -148,7 +173,7 @@ struct SelectConpanionUIView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectConpanionUIView(viewCode: .constant(""))
+        MemberSelectUIView(viewCode: .constant(""))
     }
 }
 

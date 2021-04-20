@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 func registDataName(name:String) {
     
@@ -55,6 +56,13 @@ func setViewStatusCode(statusCode:String) {
 
 func getViewStatusCode() -> String {
     return UserDefaults.standard.string(forKey: Const.statusCodeKey) ?? ""
+}
+
+func setScoreData(scoreData:scoreData){
+    let encoder = JSONEncoder()
+    if let encodedValue = try? encoder.encode(scoreData) {
+        UserDefaults.standard.set(encodedValue, forKey: Const.scoreDataKey)
+    }
 }
 
 
