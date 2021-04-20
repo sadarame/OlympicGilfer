@@ -40,3 +40,25 @@ func getViewStatus() -> String? {
     return UserDefaults.standard.string(forKey: Const.viewStatusKey)
     
 }
+
+func setUserName(userName:String) {
+    UserDefaults.standard.setValue(userName, forKey: Const.userNameKey)
+}
+
+func getUserName() -> String? {
+    return UserDefaults.standard.string(forKey: Const.userNameKey)
+}
+
+func setViewStatusCode(statusCode:String) {
+    UserDefaults.standard.setValue(statusCode, forKey: Const.statusCodeKey)
+}
+
+func getViewStatusCode() -> String {
+    return UserDefaults.standard.string(forKey: Const.statusCodeKey) ?? ""
+}
+
+
+
+
+
+

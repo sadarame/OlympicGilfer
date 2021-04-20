@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = ContentView()
         //画面遷移用
 //        let contentView = ContentView().environmentObject(Model())
-        let contentView = FirstSettingUIView()
+        let contentView = UIControllerView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

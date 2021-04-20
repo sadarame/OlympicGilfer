@@ -14,13 +14,22 @@ struct Monster: Equatable {
 
 
 struct Const {
+    
     static let nameKey = "name"
-    static let viewStatusKey = "status"
+    static let statusCodeKey = "status"
     static let userNameKey = "userName"
     
-    //ViewStatus
-    static let inputNameView = "1"
-    static let inputScoreView = "2"
-    static let resultScoreView = "3"
+    static let viewStatusKey = "viewStatus"
+    
+    //ViewStatusCode
+    static let nothigViewCode       = ""
+    static let firstSettingViewCode = "0"
+    static let inputNameViewCode    = "1"
+    static let inputScoreViewCode   = "2"
+    static let resultScoreViewCode  = "3"
+}
+
+struct scoreData {
+    
 }
 

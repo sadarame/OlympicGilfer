@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SelectConpanionUIView: View {
     
     @State private var name:String = ""
     @State private var item = getDataName()
@@ -20,9 +20,15 @@ struct ContentView: View {
     
     @State private var isShowing = false
     
+    @Binding var viewCode:String
+    
     var body: some View {
         
         VStack {
+            HStack{
+                Text("同伴者を追加・選択してください。").padding(.leading)
+                Spacer()
+            }
             TextField("検索", text: $name,onCommit: {
                 item = getDataName()
                 
@@ -65,15 +71,16 @@ struct ContentView: View {
                 Button("次へ") {
                     if inputCheck(selectedList: selectionValue) {
                         isShowing = true
-                        //選択した値を保存する処理
+                        //TODO 選択した値を保存する処理
+                        viewCode = Const.inputScoreViewCode
                         
                     } else {
                         self.showingAlert = true
                     }
-                }.fullScreenCover(isPresented: $isShowing) {
-                    InputScoreUIView(isActive: $isShowing)
+    
+                    
                 }.alert(isPresented: $showingAlert) {
-                    Alert(title: Text("入力エラー"),message: Text("二人以上選択してください"))
+                    Alert(title: Text("入力エラー"),message: Text("１〜３人を選択してください"))
                 }
                 
                 //名前入力ダイアログ
@@ -101,6 +108,7 @@ struct ContentView: View {
         }
     }
     
+    //同伴者追加
     func rowRemove(delList:Set<String>) {
         var counter:Int = 0
         var isDel = false
@@ -129,7 +137,7 @@ struct ContentView: View {
     
     func inputCheck(selectedList:Set<String>)->Bool{
         var rtVal:Bool
-        if selectedList.count <= 1 {
+        if selectedList.count <= 0 ||  selectedList.count > 3 {
             rtVal =  false
         } else {
             rtVal = true
@@ -140,7 +148,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SelectConpanionUIView(viewCode: .constant(""))
     }
 }
 
