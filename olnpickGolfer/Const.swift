@@ -6,15 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct Monster: Equatable {
     let name: String
     let description: String
 }
 
-
 struct Const {
-    
     //UserDefault用キー項目
     static let nameKey = "name"
     static let statusCodeKey = "status"
@@ -28,15 +27,10 @@ struct Const {
     static let inputNameViewCode    = "1"
     static let inputScoreViewCode   = "2"
     static let resultScoreViewCode  = "3"
-}
-
-struct scoreData:Codable {
-    let playerName1:String
-    var olynpicScore1:Int = 0
-    var olynpicAmount1:Int = 0
-    var otherScore1:Int = 0
-    var otherAmount1:Int = 0
     
- 
+    //ViewDesign
+    
+    static let titleCardWidth:CGFloat = 50.0
+    static let buttonSize:CGFloat = 50
 }
 

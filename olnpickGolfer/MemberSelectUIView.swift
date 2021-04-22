@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import RealmSwift
+import Foundation
 
 struct MemberSelectUIView: View {
     
@@ -17,10 +19,6 @@ struct MemberSelectUIView: View {
     @State private var selectionValue: Set<String>
         = []
     @State var searchArray = [String]()
-    
-     
-    
-    
     @State private var isShowing = false
     
     @Binding var viewCode:String
@@ -29,7 +27,7 @@ struct MemberSelectUIView: View {
         
         VStack {
             HStack{
-                Text("同伴者を追加・選択してください。").padding(.leading)
+                Text("同伴者を追加・選択してください。").padding(.leading).padding(.top)
                 Spacer()
             }
             TextField("検索", text: $name,onCommit: {
@@ -77,12 +75,12 @@ struct MemberSelectUIView: View {
                         //TODO 選択した値を保存する処理
                         setMembers(selectedList: selectionValue)
                         viewCode = Const.inputScoreViewCode
+                        setViewStatusCode(statusCode: viewCode)
                         
                     } else {
                         self.showingAlert = true
                     }
-                    
-                    
+        
                 }.alert(isPresented: $showingAlert) {
                     Alert(title: Text("入力エラー"),message: Text("１〜３人を選択してください"))
                 }
@@ -112,24 +110,33 @@ struct MemberSelectUIView: View {
         }
     }
     
-    
-    
     func setMembers(selectedList:Set<String>){
         //主キー生成
         let id: String = NSUUID().uuidString
+        //データモデルの準備
+        let realm = try! Realm()
+        //ラウンド生成
         let roundData = RoundData()
         
-        roundData.roundId = id
-        roundData.peoples = selectedList.count
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
-        var playersScores = [PlayerlScore]()
-        
+        //　スコア表データの作成
         for seleted in selectedList {
+            //スコア表を作成
             let playerlScore = PlayerlScore()
+            //スコア表に名前とidを記入
             playerlScore.roundId = id
             playerlScore.playerName = seleted
-            playersScores.append(playerlScore)
+            //ラウンドデータにスコア表を追加
+            roundData.playerlScoreList.append(playerlScore)
         }
+        
+        //ラウンドデータの作成
+        roundData.roundId = id
+        roundData.peoples = selectedList.count
+        //ラウンドデータの保存
+        try! realm.write {realm.add(roundData)}
+        
         
     }
     
@@ -171,7 +178,7 @@ struct MemberSelectUIView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MemberSelectUIView_Previews: PreviewProvider {
     static var previews: some View {
         MemberSelectUIView(viewCode: .constant(""))
     }

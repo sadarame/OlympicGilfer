@@ -9,12 +9,13 @@ import Foundation
 import RealmSwift
 
 class RoundData: Object {
+    
     @objc dynamic var roundId = ""
     @objc dynamic var roundDate = Date()
     @objc dynamic var peoples:Int = 0
     @objc dynamic var memo = ""
     
-    let playersScores = List<PlayerlScore>()
+    let playerlScoreList = List<PlayerlScore>()
     
     override static func primaryKey() -> String? {
         return "roundId"
@@ -29,8 +30,6 @@ class PlayerlScore: Object {
     @objc dynamic var olynpicAmount = 0
     @objc dynamic var draconNirconScore = 0
     @objc dynamic var draconNirconAmount = 0
-    
-    override static func primaryKey() -> String? {
-        return "playerName"
-    }
+    @objc dynamic var roundDate = Date()
+
 }
