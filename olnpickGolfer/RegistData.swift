@@ -46,8 +46,8 @@ func setUserName(userName:String) {
     UserDefaults.standard.setValue(userName, forKey: Const.userNameKey)
 }
 
-func getUserName() -> String? {
-    return UserDefaults.standard.string(forKey: Const.userNameKey)
+func getUserName() -> String {
+    return UserDefaults.standard.string(forKey: Const.userNameKey) ?? ""
 }
 
 func setViewStatusCode(statusCode:String) {
@@ -56,6 +56,14 @@ func setViewStatusCode(statusCode:String) {
 
 func getViewStatusCode() -> String {
     return UserDefaults.standard.string(forKey: Const.statusCodeKey) ?? ""
+}
+
+func getCrtRoundId() -> String 	{
+    return UserDefaults.standard.string(forKey: Const.crtRoundIdKey) ?? ""
+}
+
+func setCrtRoundId(crtRoundId:String) {
+    UserDefaults.standard.setValue(crtRoundId, forKey: Const.crtRoundIdKey)
 }
 
 

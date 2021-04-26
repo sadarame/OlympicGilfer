@@ -19,7 +19,7 @@ struct Const {
     static let statusCodeKey = "status"
     static let userNameKey = "userName"
     static let viewStatusKey = "viewStatus"
-    static let scoreDataKey = "scoreDataK"
+    static let crtRoundIdKey = "crtRoundId"
     
     //ViewStatusCode
     static let nothigViewCode       = ""
@@ -32,5 +32,6 @@ struct Const {
     
     static let titleCardWidth:CGFloat = 50.0
     static let buttonSize:CGFloat = 50
+    static let medalbuttonSize:CGFloat = 30
 }
 

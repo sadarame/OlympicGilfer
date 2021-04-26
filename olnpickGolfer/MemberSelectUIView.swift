@@ -19,7 +19,6 @@ struct MemberSelectUIView: View {
     @State private var selectionValue: Set<String>
         = []
     @State var searchArray = [String]()
-    @State private var isShowing = false
     
     @Binding var viewCode:String
     
@@ -71,7 +70,6 @@ struct MemberSelectUIView: View {
                 //次へボタン
                 Button("次へ") {
                     if inputCheck(selectedList: selectionValue) {
-                        isShowing = true
                         //TODO 選択した値を保存する処理
                         setMembers(selectedList: selectionValue)
                         viewCode = Const.inputScoreViewCode
@@ -84,6 +82,7 @@ struct MemberSelectUIView: View {
                 }.alert(isPresented: $showingAlert) {
                     Alert(title: Text("入力エラー"),message: Text("１〜３人を選択してください"))
                 }
+                .padding()
                 
                 //名前入力ダイアログ
                 TextFieldAlertView(
@@ -111,6 +110,8 @@ struct MemberSelectUIView: View {
     }
     
     func setMembers(selectedList:Set<String>){
+        
+        
         //主キー生成
         let id: String = NSUUID().uuidString
         //データモデルの準備
@@ -121,9 +122,18 @@ struct MemberSelectUIView: View {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         //　スコア表データの作成
+        //　自分のデータを設定
+        // 自身のスコア表を作成
+        var playerlScore = PlayerlScore()
+        playerlScore.roundId = id
+        playerlScore.playerName = getUserName()
+        //ラウンドデータにスコア表を追加
+        roundData.playerlScoreList.append(playerlScore)
+        
+        
         for seleted in selectedList {
             //スコア表を作成
-            let playerlScore = PlayerlScore()
+            playerlScore = PlayerlScore()
             //スコア表に名前とidを記入
             playerlScore.roundId = id
             playerlScore.playerName = seleted
@@ -136,7 +146,8 @@ struct MemberSelectUIView: View {
         roundData.peoples = selectedList.count
         //ラウンドデータの保存
         try! realm.write {realm.add(roundData)}
-        
+        //ラウンドキーの保存
+        setCrtRoundId(crtRoundId: id)
         
     }
     

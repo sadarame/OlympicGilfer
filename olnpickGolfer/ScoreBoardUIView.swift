@@ -1,120 +1,133 @@
-        //
-        //  InputScoreUIView.swift
-        //  olnpickGolfer
-        //
-        //  Created by Yosuke Yoshida on 2021/04/11.
-        //
-        
-        import SwiftUI
-        import UIKit
-        
-        struct ScoreBoardUIView: View {
-            
-            @Binding var viewCode:String
-            @State var c:Int = 0
-            @State var memo:String = ""
-            
-            //TODO あとで設定したものを保存させる
-            @State var rateOlynpic = 0
-            @State var rateContest = 0
-            @State var paddingNum:CGFloat = 0.5
-            
-            
-            var body: some View {
-                ScrollView {
-                    VStack {
-                        Text("スコア表").padding(.top)
-                        
-                        HStack(){
-                            EachScoreSubView(playerName: "田中達也っっっっっっっっっs")
-                            EachScoreSubView(playerName: "田中達也っっっっっっっっw")
-                            EachScoreSubView(playerName: "田")
-                            EachScoreSubView(playerName: "田中達也あああ")
-                        }
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .padding()
-                        .cornerRadius(20)
-                        .shadow(radius: 10)
-                        
-                        Text("金額表")
-                        VStack{
-                            MoneySubView(playerName: "田中達っs")
-                            MoneySubView(playerName: "田中達也っっっっっっs")
-                            MoneySubView(playerName: "田")
-                            MoneySubView(playerName: "田中達")
-                        }
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .padding()
-                        .cornerRadius(20)
-                        .shadow(radius: 10)
-                        
-                        Spacer()
-                    }
-                }
-            }
-            
-            struct EachScoreSubView: View {
-                @State var playerName:String = ""
-                
-                var body: some View{
-                    VStack(){
-                        Text(playerName).padding(.vertical).lineLimit(1)
-                        
-                        Button(action: {
-                            // action
-                        }) { VStack {
-                            Image(systemName: "minus.square")
-                                .resizable()
-                                .frame(width: Const.buttonSize, height: Const.buttonSize)
-                            
-                        }}.padding(.top)
-                        
-                        Text("0").font(.largeTitle).frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).padding(.vertical).lineLimit(1)
-                        
-                        Button(action: {
-                            // action
-                        }) { VStack {
-                            Image(systemName: "plus.app")
-                                .resizable()
-                                .frame(width:Const.buttonSize , height: Const.buttonSize, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        }
-                        }.padding(.bottom)
-                        
-                        Button(action: {
-                            // action
-                        }) { ZStack {
-                            Circle()
-                                .stroke(Color.white, lineWidth: 4)
-                            Text("13")
-                          }
-                          .frame(width: 40, height: 40)
-                        }.padding(.bottom)
+ //
+ //  InputScoreUIView.swift
+ //  olnpickGolfer
+ //
+ //  Created by Yosuke Yoshida on 2021/04/11.
+ //
+ 
+ import SwiftUI
+ import RealmSwift
+ import UIKit
+ 
+ struct ScoreBoardUIView: View {
 
-                        
-                        
-                        
-                    }
-                    .frame(maxWidth: .infinity)
-                }
+    @Binding var viewCode:String
+    
+    @State var roundData:RoundData =  getRoundData()
+    @State var roundDataStruct:RoundDataStruct = RoundDataStruct(itemDB: getRoundData())
+
+    var body: some View {
+        
+        ScrollView {
+            HStack{
+                Text("記録表").padding()
+                Spacer()
+                Text("レート")
+                TextField("", text: $roundData.memo)
+                    .frame(width: 70, height: 30, alignment: .leading)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                Button(action:{
+                    //TODO:保存処理
+                }){
+                    Image(systemName: "tray.and.arrow.down")
+                    Text("保存")
+                }.padding(.trailing)
             }
             
-            struct MoneySubView: View {
-                @State var playerName:String = ""
-                var body: some View{
-                    HStack{
-                        Text(playerName).padding().lineLimit(1)
-                        Label("00000", systemImage: "yensign.circle")
-                        Text("1位")
-                        Spacer()
-                    }
+            VStack{
+                
+                //TODO hasbleに準拠したストラクトでくりかえし処理を記載する。
+                let playerScoreList = roundDataStruct.playerlScoreList
+                ForEach(0..<roundDataStruct.playerlScoreList.count){ num in
+                    ColumSubView(playerName: playerScoreList[num].playerName)
+                }
+                    ColumSubView(playerName: "aaa")
+                    ColumSubView(playerName: "吉田")
+                    ColumSubView(playerName: "洋介")
+                    ColumSubView(playerName: "あああああああ")
+                
+                
+                
+                
+
+            }
+        }
+    }
+    
+    struct MoneySubView: View {
+        @State var playerName:String = ""
+        var body: some View{
+            VStack{
+                HStack {
+                    Text(playerName).padding(.vertical).lineLimit(1).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Spacer()
+                    Button(action: {
+                        // action
+                    }) { VStack {
+                        Image(systemName: "minus.square")
+                            .resizable()
+                            .frame(width: Const.buttonSize, height: Const.buttonSize)
+                    }}
+                    Button(action: {
+                        // action
+                    }) { VStack {
+                        Image(systemName: "plus.app")
+                            .resizable()
+                            .frame(width:Const.buttonSize , height: Const.buttonSize, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    }}
+                }.padding(.horizontal)
+                
+                HStack(spacing: 0) {
+                    ButtonSubView(buttonName: "ダ",buttonColor: Color.black)
+                    ButtonSubView(buttonName: "金",buttonColor: Color.yellow)
+                    ButtonSubView(buttonName: "銀",buttonColor: Color.gray)
+                    ButtonSubView(buttonName: "銅",buttonColor: Color.orange)
+                    ButtonSubView(buttonName: "鉄",buttonColor: Color.blue)
                 }
             }
         }
+    }
+    
+    struct ButtonSubView: View {
+        @State var buttonName:String = ""
+        @State var buttonColor:Color
         
-        struct ScoreBoardUIView_Previews: PreviewProvider {
-            static var previews: some View {
-                ScoreBoardUIView(viewCode: .constant(""))
+        var body: some View{
+            Button(action: {
+                //
+            }) {
+                Text(buttonName).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.white)
             }
+            .frame(width: 60, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .border(Color.white,width: 1)
+            .background(buttonColor)
         }
+    }
+    
+    struct ColumSubView: View {
+        @State var playerName:String = ""
+        
+        var body: some View{
+            HStack{
+                MoneySubView(playerName: playerName)
+                Text("0").font(.largeTitle).frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).padding().lineLimit(1)
+            }                       .frame(maxWidth: .infinity)
+            .background(Color.white)
+            .padding(.top)
+            .padding(.horizontal)
+            .cornerRadius(20)
+            .shadow(radius: 10)
+        }
+    }
+
+
+    
+ }
+ 
+ struct SwiftUIViewtet_Previews: PreviewProvider {
+    static var previews: some View {
+        ScoreBoardUIView(viewCode: .constant(""))
+    }
+ }
