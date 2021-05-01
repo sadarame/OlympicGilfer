@@ -24,10 +24,7 @@ struct UIControllerView: View {
                 MemberSelectUIView(viewCode: $viewCode)
                 
             case Const.inputScoreViewCode:
-	                ScoreBoardUIView(viewCode: $viewCode)
-                
-            
-            
+	                ParentScoreUIView(viewCode: $viewCode)
 
             default :
                 MemberSelectUIView(viewCode: $viewCode)

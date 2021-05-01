@@ -10,13 +10,15 @@ import RealmSwift
 import Foundation
 
 struct MemberSelectUIView: View {
+    @EnvironmentObject var store: ItemStore
     
     @State private var name:String = ""
     @State private var item = getDataName()
     @State private var isShowingAlert = false
     @State private var showingAlert = false
     @State var text: String = ""
-    @State private var selectionValue: Set<String>
+    @State private var selectionValue: Set
+    <String>
         = []
     @State var searchArray = [String]()
     
@@ -110,12 +112,8 @@ struct MemberSelectUIView: View {
     }
     
     func setMembers(selectedList:Set<String>){
-        
-        
         //主キー生成
         let id: String = NSUUID().uuidString
-        //データモデルの準備
-        let realm = try! Realm()
         //ラウンド生成
         let roundData = RoundData()
         
@@ -124,28 +122,27 @@ struct MemberSelectUIView: View {
         //　スコア表データの作成
         //　自分のデータを設定
         // 自身のスコア表を作成
-        var playerlScore = PlayerlScore()
-        playerlScore.roundId = id
-        playerlScore.playerName = getUserName()
+        var playerScore = PlayerScore()
+        playerScore.roundId = id
+        playerScore.playerName = getUserName()
         //ラウンドデータにスコア表を追加
-        roundData.playerlScoreList.append(playerlScore)
-        
+        roundData.playerScoreList.append(playerScore)
         
         for seleted in selectedList {
             //スコア表を作成
-            playerlScore = PlayerlScore()
+            playerScore = PlayerScore()
             //スコア表に名前とidを記入
-            playerlScore.roundId = id
-            playerlScore.playerName = seleted
+            playerScore.roundId = id
+            playerScore.playerName = seleted
             //ラウンドデータにスコア表を追加
-            roundData.playerlScoreList.append(playerlScore)
+            roundData.playerScoreList.append(playerScore)
         }
         
         //ラウンドデータの作成
         roundData.roundId = id
         roundData.peoples = selectedList.count
         //ラウンドデータの保存
-        try! realm.write {realm.add(roundData)}
+        store.create(roundData:roundData)
         //ラウンドキーの保存
         setCrtRoundId(crtRoundId: id)
         

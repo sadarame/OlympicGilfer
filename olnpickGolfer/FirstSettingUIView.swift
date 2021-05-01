@@ -25,7 +25,6 @@ struct FirstSettingUIView: View {
             }else if viewStatus == "4" {
 //                self.viewCode = Const.inputNameViewCode
             }
-            
         }
     }
     

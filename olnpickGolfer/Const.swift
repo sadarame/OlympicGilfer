@@ -8,11 +8,6 @@
 import Foundation
 import UIKit
 
-struct Monster: Equatable {
-    let name: String
-    let description: String
-}
-
 struct Const {
     //UserDefault用キー項目
     static let nameKey = "name"
@@ -20,18 +15,23 @@ struct Const {
     static let userNameKey = "userName"
     static let viewStatusKey = "viewStatus"
     static let crtRoundIdKey = "crtRoundId"
-    
+    static let defaultRateKey = "defaultRate"
     //ViewStatusCode
     static let nothigViewCode       = ""
     static let firstSettingViewCode = "0"
     static let inputNameViewCode    = "1"
     static let inputScoreViewCode   = "2"
     static let resultScoreViewCode  = "3"
-    
-    //ViewDesign
-    
+    //ViewDesign定数
     static let titleCardWidth:CGFloat = 50.0
     static let buttonSize:CGFloat = 50
     static let medalbuttonSize:CGFloat = 30
+    //ボタンの判定値
+    static let plus:Int = 1
+    static let minus:Int = 2
+    //設定値
+    static let defedaultRate:Int = 100
+    
+    
 }
 

@@ -66,7 +66,19 @@ func setCrtRoundId(crtRoundId:String) {
     UserDefaults.standard.setValue(crtRoundId, forKey: Const.crtRoundIdKey)
 }
 
+func getDefaultRate() -> Int {
+    /// 専用メソッド
+    //TODO 存在しない場合、０が返却される？？
+    var rv:Int = Const.defedaultRate
+    if UserDefaults.standard.integer(forKey: Const.defaultRateKey) != 0 {
+        rv =  UserDefaults.standard.integer(forKey: Const.defaultRateKey)
+    }
+    return rv
+}
 
+func setDefaultRate(rate:Int) {
+    UserDefaults.standard.setValue(rate, forKey: Const.defaultRateKey)
+}
 
 
 

@@ -14,16 +14,16 @@ class RoundData: Object {
     @objc dynamic var roundDate = Date()
     @objc dynamic var peoples:Int = 0
     @objc dynamic var memo = ""
-    @objc dynamic var rate:Int = 0
+    @objc dynamic var rate = getDefaultRate()
     
-    let playerlScoreList = List<PlayerlScore>()
+    let playerScoreList = List<PlayerScore>()
     
     override static func primaryKey() -> String? {
         return "roundId"
     }
 }
 
-class PlayerlScore: Object {
+class PlayerScore: Object,Identifiable {
     
     @objc dynamic var roundId = ""
     @objc dynamic var playerName = ""
@@ -41,19 +41,17 @@ func getRoundData() -> RoundData {
 //    let roundid:String = "roundId == '"
     let realm: Realm
     realm = try! Realm()
-//    let data = realm.objects(RoundData.self).filter(roundid + getCrtRoundId() + "'")
     let data = realm.object(ofType: RoundData.self,forPrimaryKey:getCrtRoundId())
-    //    print(data[0].roundId)
     return data!
 }
 
 struct RoundDataStruct: Hashable  {
-    var roundId:String
-    var roundDate:Date
-    var peoples:Int
-    var memo:String
-    var rate:Int
-    let playerlScoreList:List<PlayerlScore>
+    let roundId:String
+    let roundDate:Date
+    let peoples:Int
+    let memo:String
+    let rate:Int
+    let playerScoreList:List<PlayerScore>
 }
 
 extension RoundDataStruct{
@@ -63,6 +61,6 @@ extension RoundDataStruct{
         peoples = itemDB.peoples
         memo = itemDB.memo
         rate = itemDB.rate
-        playerlScoreList = itemDB.playerlScoreList
+        playerScoreList = itemDB.playerScoreList
     }
 }
