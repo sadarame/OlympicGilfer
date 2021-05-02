@@ -28,11 +28,11 @@ struct HistoryUIView: View {
                             Text("人数：" + String(item.peoples))
                             
                             
-                            if  item.playerScoreList[0].olynpicAmount >= 0 {
-                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.blue))
-                            } else {
-                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.red))
-                            }
+//                            if  item.playerScoreList[0].olynpicAmount >= 0 {
+//                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.blue))
+//                            } else {
+//                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.red))
+//                            }
                             Spacer()
                             Button("詳細") {
                                 store.historyToScoreBoard(roundid: item.roundId)
