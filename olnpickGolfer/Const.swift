@@ -20,8 +20,10 @@ struct Const {
     static let nothigViewCode       = ""
     static let firstSettingViewCode = "0"
     static let inputNameViewCode    = "1"
-    static let inputScoreViewCode   = "2"
+    static let scoreBoardViewCode   = "2"
     static let resultScoreViewCode  = "3"
+    static let historyViewCode      = "4"
+    static let mainMenuViewCode     = "5"
     //ViewDesign定数
     static let titleCardWidth:CGFloat = 50.0
     static let buttonSize:CGFloat = 50
@@ -31,7 +33,20 @@ struct Const {
     static let minus:Int = 2
     //設定値
     static let defedaultRate:Int = 100
-    
-    
+    //四人用
+    static let tetu:Int = 1
+    static let dou:Int = 2
+    static let gin:Int = 3
+    static let kin:Int = 4
+    static let daiya:Int = 5
+    //三人用
+    static let dou_Three:Int = 1
+    static let gin_Three:Int = 2
+    static let kin_Three:Int = 3
+    static let daiya_Three:Int = 4
+    //二人用
+    static let gin_Two:Int = 1
+    static let kin_Two:Int = 2
+    static let daiya_Two:Int = 3
 }
 

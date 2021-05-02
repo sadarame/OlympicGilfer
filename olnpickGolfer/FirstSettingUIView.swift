@@ -14,7 +14,7 @@ struct FirstSettingUIView: View {
     @Binding var viewCode:String
     
     var body: some View {
-    
+        
         VStack{
             if viewStatus == "1" {
                 FirstPageView(userName:$userName,viewStatus: $viewStatus)
@@ -23,7 +23,7 @@ struct FirstSettingUIView: View {
             }else if viewStatus == "3" {
                 ThirdPageView(userName:$userName,viewStatus: $viewStatus,viewCode:$viewCode)
             }else if viewStatus == "4" {
-//                self.viewCode = Const.inputNameViewCode
+                //                self.viewCode = Const.inputNameViewCode
             }
         }
     }
@@ -70,7 +70,11 @@ struct FirstSettingUIView: View {
                 Spacer()
                 Text("設定が完了しました。").font(.title).bold()
                 Spacer()
-                Button(action: {viewStatus="4";viewCode=Const.inputNameViewCode;setViewStatusCode(statusCode: Const.inputNameViewCode)}, label: {Text("OK")})
+                Button(action: {
+                    viewStatus = Const.mainMenuViewCode
+                    viewCode=Const.inputNameViewCode
+                    setViewStatusCode(statusCode: Const.mainMenuViewCode)
+                }, label: {Text("OK")})
             }
         }
     }

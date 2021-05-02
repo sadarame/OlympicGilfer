@@ -13,22 +13,26 @@ struct UIControllerView: View {
     
     var body: some View {
         
-        VStack{
+        switch viewCode {
+        
+        case Const.nothigViewCode :
+            FirstSettingUIView(viewCode: $viewCode)
             
-            switch viewCode {
+        case Const.inputNameViewCode :
+            MemberSelectUIView(viewCode: $viewCode)
             
-            case Const.nothigViewCode :
-                FirstSettingUIView(viewCode: $viewCode)
-                
-            case Const.inputNameViewCode :
-                MemberSelectUIView(viewCode: $viewCode)
-                
-            case Const.inputScoreViewCode:
-	                ParentScoreUIView(viewCode: $viewCode)
-
-            default :
-                MemberSelectUIView(viewCode: $viewCode)
-            }
+        case Const.scoreBoardViewCode:
+            ParentScoreUIView(viewCode: $viewCode)
+            
+        case Const.historyViewCode:
+            HistoryUIView(viewCode: $viewCode)
+            
+        case Const.mainMenuViewCode:
+            MainMenuUIView(viewCode: $viewCode)
+        
+        default :
+            MemberSelectUIView(viewCode: $viewCode)
+            
         }
     }
 }

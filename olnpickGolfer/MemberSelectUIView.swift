@@ -74,7 +74,7 @@ struct MemberSelectUIView: View {
                     if inputCheck(selectedList: selectionValue) {
                         //TODO 選択した値を保存する処理
                         setMembers(selectedList: selectionValue)
-                        viewCode = Const.inputScoreViewCode
+                        viewCode = Const.scoreBoardViewCode
                         setViewStatusCode(statusCode: viewCode)
                         
                     } else {
@@ -140,7 +140,7 @@ struct MemberSelectUIView: View {
         
         //ラウンドデータの作成
         roundData.roundId = id
-        roundData.peoples = selectedList.count
+        roundData.peoples = selectedList.count + 1
         //ラウンドデータの保存
         store.create(roundData:roundData)
         //ラウンドキーの保存

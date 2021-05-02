@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 func registDataName(name:String) {
     
@@ -79,6 +80,19 @@ func getDefaultRate() -> Int {
 func setDefaultRate(rate:Int) {
     UserDefaults.standard.setValue(rate, forKey: Const.defaultRateKey)
 }
+
+func StringToDate(date: Date, format: String) -> String {
+
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "ja_JP")
+    dateFormatter.dateStyle = .medium
+    dateFormatter.dateFormat = format
+    return dateFormatter.string(from: date)
+    
+   }
+
+
 
 
 

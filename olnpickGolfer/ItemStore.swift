@@ -7,11 +7,13 @@
 
 import Foundation
 import RealmSwift
+import SwiftUI
 
 final class ItemStore: ObservableObject {
-
+    
     var currentRoundData:RoundData?
     private var realm:Realm
+    var itemResults: Results<RoundData>
     
     // itemResultsにDBのデータをセット
     init(realm:Realm) {
@@ -20,11 +22,30 @@ final class ItemStore: ObservableObject {
         if roundId != "" {
             self.currentRoundData = realm.object(ofType: RoundData.self, forPrimaryKey: roundId)
         }
+        itemResults = realm.objects(RoundData.self)
+    }
+    
+    var items: [Item] {
+      itemResults.map(Item.init)
     }
     
     func setRoundData(roundData:RoundData){
-            self.currentRoundData = roundData
+        self.currentRoundData = roundData
     }
+    
+    func historyToScoreBoard(roundid : String){
+        self.currentRoundData = realm.object(ofType: RoundData.self, forPrimaryKey: roundid)
+    }
+    
+    func getTotalBudget() -> Int {
+        var totalAmountMoney = 0
+        for roundData in itemResults {
+            totalAmountMoney = totalAmountMoney + roundData.playerScoreList[0].olynpicAmount
+        }
+        
+        return totalAmountMoney
+    }
+
 }
 
 extension ItemStore {
@@ -44,6 +65,18 @@ extension ItemStore {
         }
     }
     
+    func getAmountMoney(point:Int) -> Int {
+        
+        var sumPoint:Int = 0
+        for i in currentRoundData!.playerScoreList {
+            sumPoint = sumPoint + i.olynpicScore
+        }
+        let amountOfMoney = (point * currentRoundData!.peoples - sumPoint) * currentRoundData!.rate
+        return amountOfMoney
+        
+        
+    }
+    
     //　スコア増減
     func scoreChange(playerScore:PlayerScore,type:Int){
         objectWillChange.send()
@@ -52,7 +85,7 @@ extension ItemStore {
         do {
             let realm = try Realm()
             try realm.write {
-                
+                //スコア
                 switch type {
                 case Const.plus:
                     playerScore.olynpicScore  += 1
@@ -62,6 +95,22 @@ extension ItemStore {
                     }
                 default: break
                 }
+                //金額
+                playerScore.olynpicAmount = getAmountMoney(point: playerScore.olynpicScore)
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    //　スコア増減
+    func scoreChange(playerScore:PlayerScore,amount:Int){
+        objectWillChange.send()
+        //データベース更新
+        do {
+            let realm = try Realm()
+            try realm.write {
+                playerScore.olynpicScore  += amount
+                playerScore.olynpicAmount = getAmountMoney(point: playerScore.olynpicScore)
             }
         } catch let error {
             print(error.localizedDescription)
@@ -74,6 +123,9 @@ extension ItemStore {
             let realm = try Realm()
             try realm.write {
                 currentRoundData?.rate = rate
+                for playerScore in currentRoundData!.playerScoreList {
+                    playerScore.olynpicAmount = getAmountMoney(point: playerScore.olynpicScore)
+                }
             }
         } catch let error {
             print(error.localizedDescription)
@@ -97,18 +149,15 @@ extension ItemStore {
     }
     
     // データを削除
-    func delete(itemID: Int) {
+    func delete(roundId: String) {
         objectWillChange.send()
         
-        //    guard let itemDB = itemResults.first(where: { $0.id == itemID})
-        //    else {
-        //      return
-        //    }
+        guard let roundData = realm.object(ofType: RoundData.self, forPrimaryKey: roundId) else { return }
         
         do {
             let realm = try Realm()
             try realm.write {
-                //        realm.delete(itemDB)
+                realm.delete(roundData)
             }
         } catch let error {
             print(error.localizedDescription)
