@@ -25,6 +25,15 @@ struct HistoryUIView: View {
                     VStack{
                         HStack{
                             Text(StringToDate(date: item.roundDate, format: "yyyy/MM/dd"))
+                            Text("人数：" + String(item.peoples))
+                            
+                            
+                            if  item.playerScoreList[0].olynpicAmount >= 0 {
+                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.blue))
+                            } else {
+                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.red))
+                            }
+                            Spacer()
                             Button("詳細") {
                                 store.historyToScoreBoard(roundid: item.roundId)
                                 viewCode = Const.scoreBoardViewCode
@@ -43,6 +52,15 @@ struct HistoryUIView: View {
     var sectionHeaderView: some View {
         HStack {
             Spacer()
+            Text("ユーザーの合計収支：￥")
+                
+            let totalBudget = store.getTotalBudget()
+            if totalBudget >= 0 {
+                Text(String(totalBudget)).foregroundColor(.blue)
+            } else {
+                Text(String(totalBudget)).foregroundColor(.red)
+            }
+                
         }
     }
     func rowRemove(offsets: IndexSet) {

@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 import SwiftUI
 
-
-    
     public func alertD() {
         let alert = UIAlertController(title: "警告", message: "同じ名前は登録できません。", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })

@@ -8,62 +8,23 @@
  import SwiftUI
  import RealmSwift
  import UIKit
- import Combine
+
  
  struct ScoreBoardUIView: View {
     
     @EnvironmentObject var store: ItemStore
     @State var rate = ""
     @Binding var viewCode:String
-    @State private var showingAlert = false 
     
     var body: some View {
+        
         ScrollView {
-            HStack(spacing:0){
-                Text("レート").padding(.leading)
-                TextField("", text: $rate,onCommit:{
-                    store.rateChange(rate: Int(rate) ?? 0)
-                })
-                    .onAppear {
-                        if String(store.currentRoundData!.rate) == "0" {
-                            rate = String(getDefaultRate())
-                        } else {
-                            rate = String(store.currentRoundData!.rate)
-                        }
-                    }
-                    //oncahnage
-                    .frame(width: 70, height: 30, alignment: .leading)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .onReceive(Just(rate)) { newValue in let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            rate = filtered
-                        }
-                    }
-                Spacer()
-                Button(action:{
-                    self.showingAlert = true
-                }){
-                    Image(systemName: "tray.and.arrow.down")
-                    Text("終了")
-                }
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("保存しますか"),
-                          primaryButton: .cancel(Text("キャンセル")),
-                          secondaryButton: .default(Text("保存"),
-                                                    action: {
-                                                        setViewStatusCode(statusCode: Const.mainMenuViewCode)
-                                                        viewCode = Const.historyViewCode
-                                                    }))
-                }
-                .padding(.trailing)
 
-            }
-            .padding()
             VStack{
                 ForEach(store.currentRoundData!.playerScoreList) { playerScore in
                     ColumSubView(playerScore: playerScore)
                 }
-            }
+            }.padding(.top)
         }
     }
     
