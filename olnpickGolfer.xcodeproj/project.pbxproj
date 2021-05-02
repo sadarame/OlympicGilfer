@@ -3,22 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161D1B06262EE41900EE80DE /* RealmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D1B05262EE41900EE80DE /* RealmDataModel.swift */; };
+		161D1B36262FCB0000EE80DE /* Pods_olnpickGolfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A4216D63530374A63B4556 /* Pods_olnpickGolfer.framework */; };
+		161D1B37262FCB0000EE80DE /* Pods_olnpickGolfer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4A4216D63530374A63B4556 /* Pods_olnpickGolfer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1658D536263173130011A06A /* ScoreBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658D535263173130011A06A /* ScoreBoardUIView.swift */; };
 		1674BE5425D56A060057D3EB /* RegistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5325D56A060057D3EB /* RegistData.swift */; };
-		1674BE5925D56AEF0057D3EB /* StructData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5825D56AEF0057D3EB /* StructData.swift */; };
+		1674BE5925D56AEF0057D3EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5825D56AEF0057D3EB /* Const.swift */; };
 		1674BE5E25D5866F0057D3EB /* TextFieldAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5D25D5866F0057D3EB /* TextFieldAlertView.swift */; };
+		167C385C2636AB8C00546044 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C385B2636AB8C00546044 /* Item.swift */; };
+		167C38602636AE8600546044 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C385F2636AE8600546044 /* ItemStore.swift */; };
+		169167A2262C435F000FC882 /* FirstSettingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169167A1262C435F000FC882 /* FirstSettingUIView.swift */; };
+		169167A7262D5307000FC882 /* UIControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169167A6262D5307000FC882 /* UIControllerView.swift */; };
+		169345A8263D522C00EC32AE /* ParentScoreUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345A7263D522C00EC32AE /* ParentScoreUIView.swift */; };
+		169345B0263D569900EC32AE /* MoneyBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345AF263D569900EC32AE /* MoneyBoardUIView.swift */; };
+		169345B8263DDA2700EC32AE /* TestTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345B7263DDA2700EC32AE /* TestTextfield.swift */; };
+		169345BC263EBA2C00EC32AE /* HistoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345BB263EBA2C00EC32AE /* HistoryUIView.swift */; };
+		169345C2263ECA9100EC32AE /* MainMenuSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345C1263ECA9100EC32AE /* MainMenuSwiftUIView.swift */; };
 		16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF225D2CCD000CB172A /* AppDelegate.swift */; };
 		16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */; };
-		16DA3AF725D2CCD000CB172A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF625D2CCD000CB172A /* ContentView.swift */; };
+		16DA3AF725D2CCD000CB172A /* MemberSelectUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF625D2CCD000CB172A /* MemberSelectUIView.swift */; };
 		16DA3AF925D2CCD100CB172A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AF825D2CCD100CB172A /* Assets.xcassets */; };
 		16DA3AFC25D2CCD100CB172A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AFB25D2CCD100CB172A /* Preview Assets.xcassets */; };
 		16DA3AFF25D2CCD100CB172A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */; };
 		16DA3B0A25D2CCD200CB172A /* olnpickGolferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B0925D2CCD200CB172A /* olnpickGolferTests.swift */; };
 		16DA3B1525D2CCD200CB172A /* olnpickGolferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */; };
 		16DA3B3325D3EEB900CB172A /* InputDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3B3225D3EEB800CB172A /* InputDialog.swift */; };
+		57A6A10CBDC1AFF9356FA938 /* Pods_olnpickGolferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27CB38106B2555216EE5162 /* Pods_olnpickGolferTests.framework */; };
+		C005FEC9B8526420955AF63F /* Pods_olnpickGolfer_olnpickGolferUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A33EBA0FD47E128C8289F76 /* Pods_olnpickGolfer_olnpickGolferUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +53,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		161D1B38262FCB0000EE80DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				161D1B37262FCB0000EE80DE /* Pods_olnpickGolfer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		119F0D21A39A7EB128C2D39A /* Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig"; path = "Target Support Files/Pods-olnpickGolfer-olnpickGolferUITests/Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		161D1B05262EE41900EE80DE /* RealmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataModel.swift; sourceTree = "<group>"; };
+		1658D535263173130011A06A /* ScoreBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardUIView.swift; sourceTree = "<group>"; };
 		1674BE5325D56A060057D3EB /* RegistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistData.swift; sourceTree = "<group>"; };
-		1674BE5825D56AEF0057D3EB /* StructData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructData.swift; sourceTree = "<group>"; };
+		1674BE5825D56AEF0057D3EB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		1674BE5D25D5866F0057D3EB /* TextFieldAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertView.swift; sourceTree = "<group>"; };
+		167C385B2636AB8C00546044 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		167C385F2636AE8600546044 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		169167A1262C435F000FC882 /* FirstSettingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingUIView.swift; sourceTree = "<group>"; };
+		169167A6262D5307000FC882 /* UIControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControllerView.swift; sourceTree = "<group>"; };
+		169345A7263D522C00EC32AE /* ParentScoreUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScoreUIView.swift; sourceTree = "<group>"; };
+		169345AF263D569900EC32AE /* MoneyBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoardUIView.swift; sourceTree = "<group>"; };
+		169345B7263DDA2700EC32AE /* TestTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextfield.swift; sourceTree = "<group>"; };
+		169345BB263EBA2C00EC32AE /* HistoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryUIView.swift; sourceTree = "<group>"; };
+		169345C1263ECA9100EC32AE /* MainMenuSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuSwiftUIView.swift; sourceTree = "<group>"; };
 		16DA3AEF25D2CCD000CB172A /* olnpickGolfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = olnpickGolfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DA3AF225D2CCD000CB172A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16DA3AF625D2CCD000CB172A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16DA3AF625D2CCD000CB172A /* MemberSelectUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSelectUIView.swift; sourceTree = "<group>"; };
 		16DA3AF825D2CCD100CB172A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16DA3AFB25D2CCD100CB172A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16DA3AFE25D2CCD100CB172A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +98,14 @@
 		16DA3B1425D2CCD200CB172A /* olnpickGolferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = olnpickGolferUITests.swift; sourceTree = "<group>"; };
 		16DA3B1625D2CCD200CB172A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16DA3B3225D3EEB800CB172A /* InputDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDialog.swift; sourceTree = "<group>"; };
+		4A33EBA0FD47E128C8289F76 /* Pods_olnpickGolfer_olnpickGolferUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_olnpickGolfer_olnpickGolferUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F69C59BFB29DC40ACF997BD /* Pods-olnpickGolfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolfer.release.xcconfig"; path = "Target Support Files/Pods-olnpickGolfer/Pods-olnpickGolfer.release.xcconfig"; sourceTree = "<group>"; };
+		98D8A0C450023372EEC0EFB9 /* Pods-olnpickGolfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolfer.debug.xcconfig"; path = "Target Support Files/Pods-olnpickGolfer/Pods-olnpickGolfer.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1BF57E25519DB725B7F727 /* Pods-olnpickGolferTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolferTests.debug.xcconfig"; path = "Target Support Files/Pods-olnpickGolferTests/Pods-olnpickGolferTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B27CB38106B2555216EE5162 /* Pods_olnpickGolferTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_olnpickGolferTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C451BB73C60FCC68E3FFF85A /* Pods-olnpickGolfer-olnpickGolferUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolfer-olnpickGolferUITests.release.xcconfig"; path = "Target Support Files/Pods-olnpickGolfer-olnpickGolferUITests/Pods-olnpickGolfer-olnpickGolferUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C54B8F41E5B22A04D16CBF5F /* Pods-olnpickGolferTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolferTests.release.xcconfig"; path = "Target Support Files/Pods-olnpickGolferTests/Pods-olnpickGolferTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4A4216D63530374A63B4556 /* Pods_olnpickGolfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_olnpickGolfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161D1B36262FCB0000EE80DE /* Pods_olnpickGolfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A6A10CBDC1AFF9356FA938 /* Pods_olnpickGolferTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +129,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C005FEC9B8526420955AF63F /* Pods_olnpickGolfer_olnpickGolferUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03D607AA882A5D5171EF1B85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4A4216D63530374A63B4556 /* Pods_olnpickGolfer.framework */,
+				4A33EBA0FD47E128C8289F76 /* Pods_olnpickGolfer_olnpickGolferUITests.framework */,
+				B27CB38106B2555216EE5162 /* Pods_olnpickGolferTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		16DA3AE625D2CCCF00CB172A = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +153,8 @@
 				16DA3B0825D2CCD200CB172A /* olnpickGolferTests */,
 				16DA3B1325D2CCD200CB172A /* olnpickGolferUITests */,
 				16DA3AF025D2CCD000CB172A /* Products */,
+				5578D83FC05B5768661E6CE3 /* Pods */,
+				03D607AA882A5D5171EF1B85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,11 +173,22 @@
 			children = (
 				16DA3AF225D2CCD000CB172A /* AppDelegate.swift */,
 				16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */,
-				16DA3AF625D2CCD000CB172A /* ContentView.swift */,
+				169345BB263EBA2C00EC32AE /* HistoryUIView.swift */,
+				16DA3AF625D2CCD000CB172A /* MemberSelectUIView.swift */,
+				169167A1262C435F000FC882 /* FirstSettingUIView.swift */,
+				169345C1263ECA9100EC32AE /* MainMenuSwiftUIView.swift */,
+				169167A6262D5307000FC882 /* UIControllerView.swift */,
+				169345A7263D522C00EC32AE /* ParentScoreUIView.swift */,
+				1658D535263173130011A06A /* ScoreBoardUIView.swift */,
+				169345AF263D569900EC32AE /* MoneyBoardUIView.swift */,
 				16DA3B3225D3EEB800CB172A /* InputDialog.swift */,
 				1674BE5325D56A060057D3EB /* RegistData.swift */,
-				1674BE5825D56AEF0057D3EB /* StructData.swift */,
+				1674BE5825D56AEF0057D3EB /* Const.swift */,
 				1674BE5D25D5866F0057D3EB /* TextFieldAlertView.swift */,
+				161D1B05262EE41900EE80DE /* RealmDataModel.swift */,
+				167C385B2636AB8C00546044 /* Item.swift */,
+				167C385F2636AE8600546044 /* ItemStore.swift */,
+				169345B7263DDA2700EC32AE /* TestTextfield.swift */,
 				16DA3AF825D2CCD100CB172A /* Assets.xcassets */,
 				16DA3AFD25D2CCD100CB172A /* LaunchScreen.storyboard */,
 				16DA3B0025D2CCD100CB172A /* Info.plist */,
@@ -148,6 +223,19 @@
 			path = olnpickGolferUITests;
 			sourceTree = "<group>";
 		};
+		5578D83FC05B5768661E6CE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98D8A0C450023372EEC0EFB9 /* Pods-olnpickGolfer.debug.xcconfig */,
+				8F69C59BFB29DC40ACF997BD /* Pods-olnpickGolfer.release.xcconfig */,
+				119F0D21A39A7EB128C2D39A /* Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig */,
+				C451BB73C60FCC68E3FFF85A /* Pods-olnpickGolfer-olnpickGolferUITests.release.xcconfig */,
+				AD1BF57E25519DB725B7F727 /* Pods-olnpickGolferTests.debug.xcconfig */,
+				C54B8F41E5B22A04D16CBF5F /* Pods-olnpickGolferTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16DA3B1925D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolfer" */;
 			buildPhases = (
+				7EB2A2ECE3EFBFB5366C1749 /* [CP] Check Pods Manifest.lock */,
 				16DA3AEB25D2CCD000CB172A /* Sources */,
 				16DA3AEC25D2CCD000CB172A /* Frameworks */,
 				16DA3AED25D2CCD000CB172A /* Resources */,
+				2BEADF391BEE8299ECAC5EA8 /* [CP] Embed Pods Frameworks */,
+				161D1B38262FCB0000EE80DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16DA3B1C25D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolferTests" */;
 			buildPhases = (
+				C41038431A8794A5F115E32D /* [CP] Check Pods Manifest.lock */,
 				16DA3B0125D2CCD200CB172A /* Sources */,
 				16DA3B0225D2CCD200CB172A /* Frameworks */,
 				16DA3B0325D2CCD200CB172A /* Resources */,
@@ -190,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16DA3B1F25D2CCD200CB172A /* Build configuration list for PBXNativeTarget "olnpickGolferUITests" */;
 			buildPhases = (
+				2F95D83A20F025B58780A049 /* [CP] Check Pods Manifest.lock */,
 				16DA3B0C25D2CCD200CB172A /* Sources */,
 				16DA3B0D25D2CCD200CB172A /* Frameworks */,
 				16DA3B0E25D2CCD200CB172A /* Resources */,
+				3FEB71659BDB24064018A432 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +367,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BEADF391BEE8299ECAC5EA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-olnpickGolfer/Pods-olnpickGolfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-olnpickGolfer/Pods-olnpickGolfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-olnpickGolfer/Pods-olnpickGolfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F95D83A20F025B58780A049 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-olnpickGolfer-olnpickGolferUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FEB71659BDB24064018A432 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-olnpickGolfer-olnpickGolferUITests/Pods-olnpickGolfer-olnpickGolferUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-olnpickGolfer-olnpickGolferUITests/Pods-olnpickGolfer-olnpickGolferUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-olnpickGolfer-olnpickGolferUITests/Pods-olnpickGolfer-olnpickGolferUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EB2A2ECE3EFBFB5366C1749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-olnpickGolfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C41038431A8794A5F115E32D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-olnpickGolferTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16DA3AEB25D2CCD000CB172A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,11 +477,22 @@
 			files = (
 				16DA3B3325D3EEB900CB172A /* InputDialog.swift in Sources */,
 				16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */,
+				169345BC263EBA2C00EC32AE /* HistoryUIView.swift in Sources */,
+				169345A8263D522C00EC32AE /* ParentScoreUIView.swift in Sources */,
+				169345C2263ECA9100EC32AE /* MainMenuSwiftUIView.swift in Sources */,
+				169345B0263D569900EC32AE /* MoneyBoardUIView.swift in Sources */,
+				169167A2262C435F000FC882 /* FirstSettingUIView.swift in Sources */,
+				169167A7262D5307000FC882 /* UIControllerView.swift in Sources */,
+				167C385C2636AB8C00546044 /* Item.swift in Sources */,
 				1674BE5E25D5866F0057D3EB /* TextFieldAlertView.swift in Sources */,
-				1674BE5925D56AEF0057D3EB /* StructData.swift in Sources */,
+				1674BE5925D56AEF0057D3EB /* Const.swift in Sources */,
 				16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */,
+				167C38602636AE8600546044 /* ItemStore.swift in Sources */,
 				1674BE5425D56A060057D3EB /* RegistData.swift in Sources */,
-				16DA3AF725D2CCD000CB172A /* ContentView.swift in Sources */,
+				161D1B06262EE41900EE80DE /* RealmDataModel.swift in Sources */,
+				1658D536263173130011A06A /* ScoreBoardUIView.swift in Sources */,
+				169345B8263DDA2700EC32AE /* TestTextfield.swift in Sources */,
+				16DA3AF725D2CCD000CB172A /* MemberSelectUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +657,13 @@
 		};
 		16DA3B1A25D2CCD200CB172A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98D8A0C450023372EEC0EFB9 /* Pods-olnpickGolfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"olnpickGolfer/Preview Content\"";
+				DEVELOPMENT_TEAM = 27PDE49Z62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = olnpickGolfer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,11 +679,13 @@
 		};
 		16DA3B1B25D2CCD200CB172A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F69C59BFB29DC40ACF997BD /* Pods-olnpickGolfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"olnpickGolfer/Preview Content\"";
+				DEVELOPMENT_TEAM = 27PDE49Z62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = olnpickGolfer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,6 +701,7 @@
 		};
 		16DA3B1D25D2CCD200CB172A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD1BF57E25519DB725B7F727 /* Pods-olnpickGolferTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +723,7 @@
 		};
 		16DA3B1E25D2CCD200CB172A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54B8F41E5B22A04D16CBF5F /* Pods-olnpickGolferTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +745,7 @@
 		};
 		16DA3B2025D2CCD200CB172A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 119F0D21A39A7EB128C2D39A /* Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +765,7 @@
 		};
 		16DA3B2125D2CCD200CB172A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C451BB73C60FCC68E3FFF85A /* Pods-olnpickGolfer-olnpickGolferUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
