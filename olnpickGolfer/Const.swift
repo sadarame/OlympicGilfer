@@ -25,28 +25,33 @@ struct Const {
     static let historyViewCode      = "4"
     static let mainMenuViewCode     = "5"
     //ViewDesign定数
-    static let titleCardWidth:CGFloat = 50.0
-    static let buttonSize:CGFloat = 50
+    static let titleCardWidth:CGFloat  = 50.0
+    static let buttonSize:CGFloat      = 50
     static let medalbuttonSize:CGFloat = 30
     //ボタンの判定値
-    static let plus:Int = 1
+    static let plus:Int  = 1
     static let minus:Int = 2
     //設定値
     static let defedaultRate:Int = 100
     //四人用
-    static let tetu:Int = 1
-    static let dou:Int = 2
-    static let gin:Int = 3
-    static let kin:Int = 4
+    static let tetu:Int  = 1
+    static let dou:Int   = 2
+    static let gin:Int   = 3
+    static let kin:Int   = 4
     static let daiya:Int = 5
     //三人用
-    static let dou_Three:Int = 1
-    static let gin_Three:Int = 2
-    static let kin_Three:Int = 3
+    static let dou_Three:Int   = 1
+    static let gin_Three:Int   = 2
+    static let kin_Three:Int   = 3
     static let daiya_Three:Int = 4
     //二人用
-    static let gin_Two:Int = 1
-    static let kin_Two:Int = 2
+    static let gin_Two:Int   = 1
+    static let kin_Two:Int   = 2
     static let daiya_Two:Int = 3
+    
+    static let redRatio     = 1.0   // 赤の割合
+    static let greenRatio   = 1.0   // 緑の割合
+    static let blueRatio    = 1.0   // 青の割合
+    static let opacity      = 1.0   // 不透明度
 }
 

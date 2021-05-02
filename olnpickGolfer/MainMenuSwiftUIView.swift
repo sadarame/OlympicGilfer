@@ -15,7 +15,9 @@ struct MainMenuUIView: View {
     var body: some View {
         VStack{
             Button("開始") { viewCode = Const.inputNameViewCode }
-            Button("履歴") { viewCode = Const.historyViewCode }
+            Button("履歴") { viewCode = Const.inputNameViewCode }
+            Color(red: Const.redRatio, green: Const.greenRatio, blue: Const.blueRatio, opacity: Const.opacity)
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }

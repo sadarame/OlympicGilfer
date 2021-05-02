@@ -27,10 +27,10 @@ struct HistoryUIView: View {
                             Text(StringToDate(date: item.roundDate, format: "yyyy/MM/dd"))
                             Text("人数：" + String(item.peoples))
                             
-                            
-//                            if  item.playerScoreList[0].olynpicAmount >= 0 {
+                            Text("収支：" + String(item.playerScoreList[0].olynpicAmount))
+//                            if item.playerScoreList[0].olynpicAmount >= 0 {
 //                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.blue))
-//                            } else {
+//                            }else{
 //                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.red))
 //                            }
                             Spacer()
