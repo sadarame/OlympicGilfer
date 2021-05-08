@@ -13,12 +13,64 @@ struct MainMenuUIView: View {
     @Binding var viewCode:String
     
     var body: some View {
-        VStack{
-            Button("開始") { viewCode = Const.inputNameViewCode }
-            Button("履歴") { viewCode = Const.inputNameViewCode }
-            Color(red: Const.redRatio, green: Const.greenRatio, blue: Const.blueRatio, opacity: Const.opacity)
-                .edgesIgnoringSafeArea(.all)
-        }
+            VStack(){
+    
+                
+                Button(action:{
+                    viewCode = Const.inputNameViewCode
+                }){
+                    Image("Fill_In_Score")
+                        .renderingMode(.original)   // オリジナル画像を表示
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                    Text("開始").font(.largeTitle)
+                }
+                .frame(maxWidth: .infinity,maxHeight: 100)
+                .background(Color(.white))
+                .cornerRadius(50)
+                .shadow(radius: 10)
+                .padding()
+
+                
+                
+                Button(action:{
+                    viewCode = Const.historyViewCode
+                }){
+                    Image("history")
+                        .renderingMode(.original)   // オリジナル画像を表示
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                    Text("履歴").font(.largeTitle)
+
+                }
+                .frame(maxWidth: .infinity,maxHeight: 100)
+                .background(Color(.white))
+                .cornerRadius(50)
+                .shadow(radius: 10)
+                .padding()
+                
+                Button(action:{
+                    viewCode = Const.settingViewCode
+                }){
+                    HStack {
+                    Image("Setting")
+                        .renderingMode(.original)   // オリジナル画像を表示
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                    Text("設定").font(.largeTitle)
+                    }
+                }
+                .frame(maxWidth: .infinity,maxHeight: 100)
+                .background(Color(.white))
+                .cornerRadius(50)
+                .shadow(radius: 10)
+                .padding()
+      
+            }
+        
     }
 }
 

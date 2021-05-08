@@ -24,6 +24,7 @@ struct Const {
     static let resultScoreViewCode  = "3"
     static let historyViewCode      = "4"
     static let mainMenuViewCode     = "5"
+    static let settingViewCode     = "6"
     //ViewDesign定数
     static let titleCardWidth:CGFloat  = 50.0
     static let buttonSize:CGFloat      = 50
@@ -49,9 +50,9 @@ struct Const {
     static let kin_Two:Int   = 2
     static let daiya_Two:Int = 3
     
-    static let redRatio     = 1.0   // 赤の割合
-    static let greenRatio   = 1.0   // 緑の割合
-    static let blueRatio    = 1.0   // 青の割合
-    static let opacity      = 1.0   // 不透明度
+    static let redRatio     = 0.50   // 赤の割合
+    static let greenRatio   = 0.75   // 緑の割合
+    static let blueRatio    = 0.25  // 青の割合
+    static let opacity      = 0.5 // 不透明度
 }
 

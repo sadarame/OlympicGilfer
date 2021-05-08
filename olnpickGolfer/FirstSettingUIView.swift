@@ -18,10 +18,8 @@ struct FirstSettingUIView: View {
         VStack{
             if viewStatus == "1" {
                 FirstPageView(userName:$userName,viewStatus: $viewStatus)
-            }else if viewStatus == "2" {
-                SecondPageView(userName:$userName,viewStatus: $viewStatus)
             }else if viewStatus == "3" {
-                ThirdPageView(userName:$userName,viewStatus: $viewStatus,viewCode:$viewCode)
+                ThirdPageView(userName:$userName,viewCode:$viewCode)
             }else if viewStatus == "4" {
                 //                self.viewCode = Const.inputNameViewCode
             }
@@ -36,45 +34,48 @@ struct FirstSettingUIView: View {
         
         var body: some View{
             VStack {
-                Text("ゴルフオリンピックスコア記録表へようこそ！！").padding()
-                Text("最初に名前を登録をしましょう。").padding()
-                Text("登録した情報は、あとで変更できます。").padding()
-                Button(action: {viewStatus="2"}, label: {Text("OK")})
+                Text("ゴルフオリンピック記録帳へようこそ！！")
+                    .padding(40)
+                    .font(.largeTitle)
+                    .shadow(color: Color.white, radius: 100, x: 0, y: 0)
+                Text("名前を設定してください")
+                    .padding(.horizontal)
+                    .font(.largeTitle)
+                    .shadow(color: Color.white, radius: 100, x: 0, y: 0)
+                    .cornerRadius(50)
+                TextField("\("未設定")", text: self.$userName)
+                    .font(.largeTitle)
+                    .background(Color.white)
+                    .padding()
+                Button(action: {viewStatus="3";setUserName(userName: userName)}, label: {Text("保存")})
+                    .frame(width:100,height: 50)
+                    .background(Color(.white))
+                    .cornerRadius(50)
+                    .shadow(radius: 10)
+                    .padding()
             }
+            
         }
     }
     
-    // 子View2
-    struct SecondPageView: View {
-        
-        @Binding var userName : String
-        @Binding var viewStatus : String
-        
-        var body: some View{
-            VStack {
-                Text("名前を設定してください。")
-                TextField("\("未設定")", text: self.$userName).font(.title).padding()
-                Button(action: {viewStatus="3";setUserName(userName: userName)}, label: {Text("保存")})
-            }
-        }
-    }
     
     //子View3
     struct ThirdPageView: View {
         @Binding var userName : String
-        @Binding var viewStatus : String
         @Binding var viewCode:String
         
         var body: some View{
             VStack {
-                Spacer()
                 Text("設定が完了しました。").font(.title).bold()
-                Spacer()
                 Button(action: {
-                    viewStatus = Const.mainMenuViewCode
-                    viewCode=Const.inputNameViewCode
+                    viewCode=Const.mainMenuViewCode
                     setViewStatusCode(statusCode: Const.mainMenuViewCode)
                 }, label: {Text("OK")})
+                .frame(width:100,height: 50)
+                .background(Color(.white))
+                .cornerRadius(50)
+                .shadow(radius: 10)
+                .padding()
             }
         }
     }

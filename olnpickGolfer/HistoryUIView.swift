@@ -16,7 +16,7 @@ struct HistoryUIView: View {
     var body: some View {
         
         HStack{
-            Text("履歴").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).padding()
+            Text("履歴").font(.title).padding()
             Spacer()
         }
         List {
@@ -24,7 +24,8 @@ struct HistoryUIView: View {
                 ForEach(store.items) { item in
                     VStack{
                         HStack{
-                            Text(StringToDate(date: item.roundDate, format: "yyyy/MM/dd"))
+                            Text(StringToDate(date: item.roundDate, format: "yyyy/MM/dd HH:MM:SS"))
+//                            print(item.roundDate)
                             Text("人数：" + String(item.peoples))
                             
                             Text("収支：" + String(item.playerScoreList[0].olynpicAmount))

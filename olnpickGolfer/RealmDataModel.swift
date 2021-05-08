@@ -11,7 +11,7 @@ import RealmSwift
 class RoundData: Object {
     
     @objc dynamic var roundId = ""
-    @objc dynamic var roundDate = Date()
+    @objc dynamic var roundDate:Date = Date()
     @objc dynamic var peoples:Int = 0
     @objc dynamic var memo = ""
     @objc dynamic var rate = getDefaultRate()
@@ -34,8 +34,6 @@ class PlayerScore: Object,Identifiable {
     @objc dynamic var roundDate = Date()
     
 }
-
-
 func getRoundData() -> RoundData {
     
 //    let roundid:String = "roundId == '"
@@ -45,22 +43,3 @@ func getRoundData() -> RoundData {
     return data!
 }
 
-struct RoundDataStruct: Hashable  {
-    let roundId:String
-    let roundDate:Date
-    let peoples:Int
-    let memo:String
-    let rate:Int
-    let playerScoreList:List<PlayerScore>
-}
-
-extension RoundDataStruct{
-    init(itemDB: RoundData) {
-        roundId = itemDB.roundId
-        roundDate = itemDB.roundDate
-        peoples = itemDB.peoples
-        memo = itemDB.memo
-        rate = itemDB.rate
-        playerScoreList = itemDB.playerScoreList
-    }
-}

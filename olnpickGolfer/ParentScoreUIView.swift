@@ -48,8 +48,7 @@ struct ParentScoreUIView: View {
                             selectedView = 0
                         }
                     })
-        )
-        
+        )        
     }
     
     struct CommonHeaderSubView: View {

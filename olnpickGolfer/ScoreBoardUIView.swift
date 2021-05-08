@@ -56,7 +56,7 @@
                             .frame(width:Const.buttonSize , height: Const.buttonSize, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     }}
                 }.padding(.horizontal)
-                
+        
                 HStack(spacing:0) {
                     
                     ButtonSubView(buttonName: "ダ",buttonColor: Color.black,playerScore: playerScore)
@@ -157,6 +157,7 @@
             .padding(.horizontal)
             .cornerRadius(20)
             .shadow(radius: 10)
+            
         }
     }
  }

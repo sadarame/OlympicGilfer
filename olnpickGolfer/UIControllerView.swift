@@ -13,32 +13,40 @@ struct UIControllerView: View {
     
     var body: some View {
         
-        ZStack {
-            switch viewCode {
-            
-            case Const.nothigViewCode :
-                FirstSettingUIView(viewCode: $viewCode)
-                
-            case Const.inputNameViewCode :
-                MemberSelectUIView(viewCode: $viewCode)
-                
-            case Const.scoreBoardViewCode:
-                ParentScoreUIView(viewCode: $viewCode)
-                
-            case Const.historyViewCode:
-                HistoryUIView(viewCode: $viewCode)
-                
-            case Const.mainMenuViewCode:
-                MainMenuUIView(viewCode: $viewCode)
-                
-            default :
-                MemberSelectUIView(viewCode: $viewCode)
-                
-            }
-            Color(red: Const.redRatio, green: Const.greenRatio, blue: Const.blueRatio, opacity: Const.opacity)
-                .edgesIgnoringSafeArea(.all)
-        }
         
+        switch viewCode {
+        
+        case Const.nothigViewCode :
+            ZStack{
+                Color("Color_2")
+                    .edgesIgnoringSafeArea(.all)
+                FirstSettingUIView(viewCode: $viewCode)
+            }
+            
+        case Const.inputNameViewCode :
+            MemberSelectUIView(viewCode: $viewCode)
+            
+        case Const.scoreBoardViewCode:
+            ParentScoreUIView(viewCode: $viewCode)
+            
+        case Const.historyViewCode:
+            HistoryUIView(viewCode: $viewCode)
+            
+        case Const.settingViewCode:
+            SettingUIView(viewCode: $viewCode)
+            
+        case Const.mainMenuViewCode:
+            ZStack{
+                Image("4213816_m")
+                    .resizable()
+                    .opacity(1)
+                    .edgesIgnoringSafeArea(.all)
+                
+                MainMenuUIView(viewCode: $viewCode)
+            }
+        default :
+            MemberSelectUIView(viewCode: $viewCode)
+        }
     }
 }
 

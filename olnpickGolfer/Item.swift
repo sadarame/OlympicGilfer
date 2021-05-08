@@ -11,6 +11,7 @@ import RealmSwift
 struct Item: Identifiable {
     
     let id = UUID()
+    
     let roundId:String
     let roundDate:Date
     let peoples:Int

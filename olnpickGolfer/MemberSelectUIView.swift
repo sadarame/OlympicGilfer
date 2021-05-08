@@ -28,7 +28,9 @@ struct MemberSelectUIView: View {
         
         VStack {
             HStack{
-                Text("同伴者を追加・選択してください。").padding(.leading).padding(.top)
+                Text("同伴者を選択").padding(.leading).padding(.top)
+                    .font(.largeTitle)
+//                    .foregroundColor(.white)
                 Spacer()
             }
             TextField("検索", text: $name,onCommit: {
@@ -53,19 +55,31 @@ struct MemberSelectUIView: View {
                 ForEach(item, id: \.self) { item in
                     Text(item)
                 }
-            }.environment(\.editMode, .constant(.active))
+            }.navigationTitle("履歴")
+            .environment(\.editMode, .constant(.active))
+            
             
             Spacer()
             
             HStack {
                 //追加ボタン
                 Button("追加") { isShowingAlert = true }.padding()
+                    .frame(width:100,height: 50)
+                    .background(Color(.white))
+                    .cornerRadius(50)
+                    .shadow(radius: 10)
+                    .padding()
+                
                 //削除ボタン制御
                 if !item.isEmpty {
                     Button("削除") {
                         rowRemove(delList: selectionValue)
                         selectionValue = []
                     }
+                    .frame(width:100,height: 50)
+                    .background(Color(.white))
+                    .cornerRadius(50)
+                    .shadow(radius: 10)
                     .padding()
                 }
                 Spacer()
@@ -84,6 +98,10 @@ struct MemberSelectUIView: View {
                 }.alert(isPresented: $showingAlert) {
                     Alert(title: Text("入力エラー"),message: Text("１〜３人を選択してください"))
                 }
+                .frame(width:100,height: 50)
+                .background(Color(.white))
+                .cornerRadius(50)
+                .shadow(radius: 10)
                 .padding()
                 
                 //名前入力ダイアログ
@@ -109,6 +127,18 @@ struct MemberSelectUIView: View {
                 ).frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
         }
+        .gesture(DragGesture()
+                    .onEnded({ value in
+                        if (abs(value.translation.width) < 10) { return } // too small movement, ignore note: 10 is default value for minimumDistance
+                        if (value.translation.width < 0 ) {
+                            // swiped to left
+//                            viewCode = Const.mainMenuViewCode
+                        } else if (value.translation.width > 0 ) {
+                            // swiped to right
+                            viewCode = Const.mainMenuViewCode
+                        }
+                    })
+        )
     }
     
     func setMembers(selectedList:Set<String>){
@@ -117,6 +147,16 @@ struct MemberSelectUIView: View {
         //ラウンド生成
         let roundData = RoundData()
         
+        
+//
+//        let dateFormater = DateFormatter()
+//         dateFormater.locale = Locale(identifier: "ja_JP")
+//         dateFormater.dateFormat = "yyyy/MM/dd HH:mm:ss"
+         roundData.roundDate = Date()
+        
+
+        print(roundData.roundDate)
+//        roundData.roundDate = tmp
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         //　スコア表データの作成
