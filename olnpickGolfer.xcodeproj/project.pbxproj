@@ -23,6 +23,10 @@
 		169345B8263DDA2700EC32AE /* TestTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345B7263DDA2700EC32AE /* TestTextfield.swift */; };
 		169345BC263EBA2C00EC32AE /* HistoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345BB263EBA2C00EC32AE /* HistoryUIView.swift */; };
 		169345C2263ECA9100EC32AE /* MainMenuSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345C1263ECA9100EC32AE /* MainMenuSwiftUIView.swift */; };
+		169345C9263FF70B00EC32AE /* MainBackgroud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 169345C8263FF70B00EC32AE /* MainBackgroud.jpg */; };
+		169345CE263FF72200EC32AE /* Fill_In_Score.png in Resources */ = {isa = PBXBuildFile; fileRef = 169345CC263FF72000EC32AE /* Fill_In_Score.png */; };
+		169345CF263FF72200EC32AE /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 169345CD263FF72200EC32AE /* history.png */; };
+		169345D5264168AC00EC32AE /* SettingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169345D4264168AA00EC32AE /* SettingUIView.swift */; };
 		16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF225D2CCD000CB172A /* AppDelegate.swift */; };
 		16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */; };
 		16DA3AF725D2CCD000CB172A /* MemberSelectUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA3AF625D2CCD000CB172A /* MemberSelectUIView.swift */; };
@@ -83,6 +87,10 @@
 		169345B7263DDA2700EC32AE /* TestTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextfield.swift; sourceTree = "<group>"; };
 		169345BB263EBA2C00EC32AE /* HistoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryUIView.swift; sourceTree = "<group>"; };
 		169345C1263ECA9100EC32AE /* MainMenuSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuSwiftUIView.swift; sourceTree = "<group>"; };
+		169345C8263FF70B00EC32AE /* MainBackgroud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MainBackgroud.jpg; sourceTree = "<group>"; };
+		169345CC263FF72000EC32AE /* Fill_In_Score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fill_In_Score.png; sourceTree = "<group>"; };
+		169345CD263FF72200EC32AE /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		169345D4264168AA00EC32AE /* SettingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUIView.swift; sourceTree = "<group>"; };
 		16DA3AEF25D2CCD000CB172A /* olnpickGolfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = olnpickGolfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DA3AF225D2CCD000CB172A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +154,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		169345C7263FF6D900EC32AE /* image */ = {
+			isa = PBXGroup;
+			children = (
+				169345CD263FF72200EC32AE /* history.png */,
+				169345CC263FF72000EC32AE /* Fill_In_Score.png */,
+				169345C8263FF70B00EC32AE /* MainBackgroud.jpg */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		16DA3AE625D2CCCF00CB172A = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +189,13 @@
 		16DA3AF125D2CCD000CB172A /* olnpickGolfer */ = {
 			isa = PBXGroup;
 			children = (
+				169345C7263FF6D900EC32AE /* image */,
 				16DA3AF225D2CCD000CB172A /* AppDelegate.swift */,
 				16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */,
 				169345BB263EBA2C00EC32AE /* HistoryUIView.swift */,
 				16DA3AF625D2CCD000CB172A /* MemberSelectUIView.swift */,
 				169167A1262C435F000FC882 /* FirstSettingUIView.swift */,
+				169345D4264168AA00EC32AE /* SettingUIView.swift */,
 				169345C1263ECA9100EC32AE /* MainMenuSwiftUIView.swift */,
 				169167A6262D5307000FC882 /* UIControllerView.swift */,
 				169345A7263D522C00EC32AE /* ParentScoreUIView.swift */,
@@ -347,7 +367,10 @@
 			files = (
 				16DA3AFF25D2CCD100CB172A /* LaunchScreen.storyboard in Resources */,
 				16DA3AFC25D2CCD100CB172A /* Preview Assets.xcassets in Resources */,
+				169345CF263FF72200EC32AE /* history.png in Resources */,
 				16DA3AF925D2CCD100CB172A /* Assets.xcassets in Resources */,
+				169345CE263FF72200EC32AE /* Fill_In_Score.png in Resources */,
+				169345C9263FF70B00EC32AE /* MainBackgroud.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +507,7 @@
 				169167A2262C435F000FC882 /* FirstSettingUIView.swift in Sources */,
 				169167A7262D5307000FC882 /* UIControllerView.swift in Sources */,
 				167C385C2636AB8C00546044 /* Item.swift in Sources */,
+				169345D5264168AC00EC32AE /* SettingUIView.swift in Sources */,
 				1674BE5E25D5866F0057D3EB /* TextFieldAlertView.swift in Sources */,
 				1674BE5925D56AEF0057D3EB /* Const.swift in Sources */,
 				16DA3AF525D2CCD000CB172A /* SceneDelegate.swift in Sources */,
