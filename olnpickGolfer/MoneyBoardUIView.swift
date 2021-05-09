@@ -49,34 +49,33 @@
         
         var body: some View{
             
-            
             HStack(spacing:0){
                 MoneySubView(playerScore: playerScore)
-//                let moneyAmount = store.getAmountMoney(point: playerScore.olynpicScore)
+                
                 let moneyAmount = playerScore.olynpicAmount
                 if moneyAmount >= 0 {
                     Text("¥" + String(moneyAmount))
                         .font(.system(.title, design: .monospaced))
-                        .frame(width:200,alignment: .trailing)
+                        .frame(width:150,alignment: .trailing)
                         .lineLimit(1)
                         .padding(.trailing)
                         .foregroundColor(.blue)
                 } else {
                     Text("¥" + String(moneyAmount))
                         .font(.system(.title, design: .monospaced))
-                        .frame(width:200,alignment: .trailing)
+                        .frame(width:150,alignment: .trailing)
                         .lineLimit(1)
                         .padding(.trailing)
                         .foregroundColor(.red)
                 }
             }
-            .background(Color.white)
+            .background(Color("Color_Dark"))
+            .border(Color("Color_Border"),width: 1)
             .padding()
             .cornerRadius(20)
             .shadow(radius: 10)
         }
     }
-    
  }
  
  struct MoneyBoardUIView_Previews: PreviewProvider {

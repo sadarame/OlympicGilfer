@@ -132,7 +132,7 @@
                 Text(buttonName).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.white)
             }
             .frame(width: 60, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .border(Color.white,width: 1)
+            .border(Color("Color_Dark"),width: 1)
             .background(buttonColor)
         }
     }
@@ -152,8 +152,8 @@
                         print(playerScore.playerName)
                     }
             }
-            .background(Color.white)
-            .padding(.horizontal)
+            .background(Color("Color_Dark"))
+            .border(Color("Color_Border"),width: 1)
             .padding(.horizontal)
             .cornerRadius(20)
             .shadow(radius: 10)

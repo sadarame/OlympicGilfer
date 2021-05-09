@@ -60,6 +60,8 @@
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5529798279445729~7699454402</string>
+	<key>CFBundleDisplayName</key>
+	<string>Olynpic計算機</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 </dict>

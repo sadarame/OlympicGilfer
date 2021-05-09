@@ -25,6 +25,7 @@ struct HistoryUIView: View {
                     VStack{
                         HStack{
                             Text(item.roundDate.prefix(10))
+//                            print(item.roundDate)
                             Text("人数：" + String(item.peoples))
                             Text("収支：" + String(item.playerScoreList[0].olynpicAmount))
                             Spacer()

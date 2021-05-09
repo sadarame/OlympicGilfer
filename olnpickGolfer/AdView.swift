@@ -12,7 +12,11 @@ struct AdMobView: UIViewRepresentable {
     func makeUIView(context: Context) -> GADBannerView {
         let banner = GADBannerView(adSize: kGADAdSizeBanner)
         // 以下は、バナー広告向けのテスト専用広告ユニットIDです。自身の広告ユニットIDと置き換えてください。
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+//        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        //本物
+        banner.adUnitID = "ca-app-pub-5529798279445729/3568637709"
+        
         banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
         banner.load(GADRequest())
         return banner
@@ -25,7 +29,7 @@ struct AdMobView: UIViewRepresentable {
 
 struct AdView: View {
     var body: some View {
-        AdMobView() .frame(maxWidth: .infinity, maxHeight: 100, alignment: Alignment.center)
+        AdMobView() .frame(maxWidth: .infinity, maxHeight: 80, alignment: Alignment.center)
     }
 }
 
