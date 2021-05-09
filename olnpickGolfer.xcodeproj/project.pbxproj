@@ -11,6 +11,9 @@
 		161D1B36262FCB0000EE80DE /* Pods_olnpickGolfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A4216D63530374A63B4556 /* Pods_olnpickGolfer.framework */; };
 		161D1B37262FCB0000EE80DE /* Pods_olnpickGolfer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4A4216D63530374A63B4556 /* Pods_olnpickGolfer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1658D536263173130011A06A /* ScoreBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658D535263173130011A06A /* ScoreBoardUIView.swift */; };
+		166D5A802647C142009BB470 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D5A7F2647C142009BB470 /* Common.swift */; };
+		166D5A842647DB22009BB470 /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D5A832647DB22009BB470 /* AdView.swift */; };
+		166D5AA02647E585009BB470 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 166D5A9F2647E585009BB470 /* GoogleService-Info.plist */; };
 		1674BE5425D56A060057D3EB /* RegistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5325D56A060057D3EB /* RegistData.swift */; };
 		1674BE5925D56AEF0057D3EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5825D56AEF0057D3EB /* Const.swift */; };
 		1674BE5E25D5866F0057D3EB /* TextFieldAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674BE5D25D5866F0057D3EB /* TextFieldAlertView.swift */; };
@@ -75,6 +78,9 @@
 		119F0D21A39A7EB128C2D39A /* Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig"; path = "Target Support Files/Pods-olnpickGolfer-olnpickGolferUITests/Pods-olnpickGolfer-olnpickGolferUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		161D1B05262EE41900EE80DE /* RealmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataModel.swift; sourceTree = "<group>"; };
 		1658D535263173130011A06A /* ScoreBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardUIView.swift; sourceTree = "<group>"; };
+		166D5A7F2647C142009BB470 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		166D5A832647DB22009BB470 /* AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
+		166D5A9F2647E585009BB470 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1674BE5325D56A060057D3EB /* RegistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistData.swift; sourceTree = "<group>"; };
 		1674BE5825D56AEF0057D3EB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		1674BE5D25D5866F0057D3EB /* TextFieldAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertView.swift; sourceTree = "<group>"; };
@@ -189,8 +195,10 @@
 		16DA3AF125D2CCD000CB172A /* olnpickGolfer */ = {
 			isa = PBXGroup;
 			children = (
+				166D5A9F2647E585009BB470 /* GoogleService-Info.plist */,
 				169345C7263FF6D900EC32AE /* image */,
 				16DA3AF225D2CCD000CB172A /* AppDelegate.swift */,
+				166D5A832647DB22009BB470 /* AdView.swift */,
 				16DA3AF425D2CCD000CB172A /* SceneDelegate.swift */,
 				169345BB263EBA2C00EC32AE /* HistoryUIView.swift */,
 				16DA3AF625D2CCD000CB172A /* MemberSelectUIView.swift */,
@@ -206,6 +214,7 @@
 				1674BE5825D56AEF0057D3EB /* Const.swift */,
 				1674BE5D25D5866F0057D3EB /* TextFieldAlertView.swift */,
 				161D1B05262EE41900EE80DE /* RealmDataModel.swift */,
+				166D5A7F2647C142009BB470 /* Common.swift */,
 				167C385B2636AB8C00546044 /* Item.swift */,
 				167C385F2636AE8600546044 /* ItemStore.swift */,
 				169345B7263DDA2700EC32AE /* TestTextfield.swift */,
@@ -371,6 +380,7 @@
 				16DA3AF925D2CCD100CB172A /* Assets.xcassets in Resources */,
 				169345CE263FF72200EC32AE /* Fill_In_Score.png in Resources */,
 				169345C9263FF70B00EC32AE /* MainBackgroud.jpg in Resources */,
+				166D5AA02647E585009BB470 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +511,13 @@
 				16DA3B3325D3EEB900CB172A /* InputDialog.swift in Sources */,
 				16DA3AF325D2CCD000CB172A /* AppDelegate.swift in Sources */,
 				169345BC263EBA2C00EC32AE /* HistoryUIView.swift in Sources */,
+				166D5A842647DB22009BB470 /* AdView.swift in Sources */,
 				169345A8263D522C00EC32AE /* ParentScoreUIView.swift in Sources */,
 				169345C2263ECA9100EC32AE /* MainMenuSwiftUIView.swift in Sources */,
 				169345B0263D569900EC32AE /* MoneyBoardUIView.swift in Sources */,
 				169167A2262C435F000FC882 /* FirstSettingUIView.swift in Sources */,
 				169167A7262D5307000FC882 /* UIControllerView.swift in Sources */,
+				166D5A802647C142009BB470 /* Common.swift in Sources */,
 				167C385C2636AB8C00546044 /* Item.swift in Sources */,
 				169345D5264168AC00EC32AE /* SettingUIView.swift in Sources */,
 				1674BE5E25D5866F0057D3EB /* TextFieldAlertView.swift in Sources */,
