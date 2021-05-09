@@ -74,6 +74,7 @@ struct ParentScoreUIView: View {
                             //oncahnage
                             .frame(width: 70, height: 30, alignment: .leading)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .multilineTextAlignment(.trailing)
                             .onReceive(Just(rate)) { newValue in let filtered = newValue.filter { "0123456789".contains($0) }
                                 if filtered != newValue {
                                     rate = filtered

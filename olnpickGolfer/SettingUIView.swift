@@ -6,72 +6,55 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SettingUIView: View {
-    @State private var isOn = false
-        @State private var pickerSelection = 0
+    
     @Binding var viewCode:String
-    @State var username:String = "0"
-        
-        let languages: [String] = [
-            "English",
-            "Japanease",
-            "French",
-            "Chinese"
-        ]
+    
+    @State var username:String = getUserName()
+    @State var initialRate:String = String(getDefaultRate())
+    
     var body: some View {
         NavigationView {
-                  Form {
-                      HStack {
-                          Image(systemName: "person.circle")
-                          Button("Sign in to your iPhone", action: {})
-                      }
-                      Section(header: Text("General")) {
-                          HStack {
-                              Text("Airplane Mode")
-                              Spacer()
-                              Toggle(isOn: $isOn) {
-                                  EmptyView()
-                              }
-                          }
-                        HStack{
-                            Text("ユーザ名：")
-                            Spacer()
-                            
-                            TextField("Username", text: $username)
-                                .frame(maxWidth: .infinity, alignment: .trailing)
+            Form {
+                Section(header: Text("一般")) {
+                    HStack{
+                        Text("ユーザ名：")
+                        Spacer()
+                        TextField("ユーザー名", text: $username,onCommit:{
+                            setUserName(userName: username)
+                        })
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .multilineTextAlignment(.trailing)
+                    }
+                    
+                    
+                    HStack{
+                        Text("初期レート：")
+                        Spacer()
+                        TextField("レート", text: $initialRate,onCommit:{
+                            setDefaultRate(rate: Int(initialRate) ?? 0)
+                        })
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .multilineTextAlignment(.trailing)
+                        .onReceive(Just(initialRate)) { newValue in let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                initialRate = filtered
+                            }
                         }
-                          HStack {
-                              Picker(selection: $pickerSelection, label: Text("Language")) {
-                                  ForEach(0..<self.languages.count) { index in
-                                      Text(self.languages[index])
-                                  }
-                              }
-                          }
-                      }
-                      Section(header: Text("About"), footer: Text("copyright ©︎ 20XX-20XX Apple All Rights Reserved.")) {
-                          HStack {
-                              Text("Device Name")
-                              Spacer()
-                              Text(UIDevice.current.name)
-                          }
-                          HStack {
-                              Text("Operating System")
-                              Spacer()
-                              Text(UIDevice.current.systemName)
-                          }
-                          HStack {
-                              Text("Version")
-                              Spacer()
-                              Text(UIDevice.current.systemVersion)
-                          }
-                      }
-                  }
-                  .navigationBarTitle("Settings")
-              }
-          }
-      }
-
+                        
+                    }
+                }
+            }
+            .navigationBarTitle("設定", displayMode: .inline)
+            .navigationBarItems(leading:
+                                    Button("戻る"){
+                                        viewCode = Const.mainMenuViewCode
+                                    })
+        }
+    }
+}
 struct SettingUIView_Previews: PreviewProvider {
     static var previews: some View {
         SettingUIView(viewCode: .constant(""))

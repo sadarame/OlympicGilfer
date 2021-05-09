@@ -25,7 +25,6 @@ struct MemberSelectUIView: View {
     @Binding var viewCode:String
     
     var body: some View {
-        
         VStack {
             HStack{
                 Text("同伴者を選択").padding(.leading).padding(.top)
@@ -147,16 +146,9 @@ struct MemberSelectUIView: View {
         //ラウンド生成
         let roundData = RoundData()
         
-        
-//
-//        let dateFormater = DateFormatter()
-//         dateFormater.locale = Locale(identifier: "ja_JP")
-//         dateFormater.dateFormat = "yyyy/MM/dd HH:mm:ss"
-         roundData.roundDate = Date()
-        
+        roundData.roundDate = changeDateToString(date: Date())
 
         print(roundData.roundDate)
-//        roundData.roundDate = tmp
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         //　スコア表データの作成

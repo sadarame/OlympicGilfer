@@ -13,7 +13,7 @@ struct Item: Identifiable {
     let id = UUID()
     
     let roundId:String
-    let roundDate:Date
+    let roundDate:String
     let peoples:Int
     let memo:String
     let rate:Int

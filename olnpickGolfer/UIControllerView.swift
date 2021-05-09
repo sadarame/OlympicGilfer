@@ -37,10 +37,8 @@ struct UIControllerView: View {
             
         case Const.mainMenuViewCode:
             ZStack{
-                Image("4213816_m")
-                    .resizable()
-                    .opacity(1)
-                    .edgesIgnoringSafeArea(.all)
+                    Color("Color_2")
+                        .edgesIgnoringSafeArea(.all)
                 
                 MainMenuUIView(viewCode: $viewCode)
             }

@@ -11,7 +11,7 @@ import RealmSwift
 class RoundData: Object {
     
     @objc dynamic var roundId = ""
-    @objc dynamic var roundDate:Date = Date()
+    @objc dynamic var roundDate:String = ""
     @objc dynamic var peoples:Int = 0
     @objc dynamic var memo = ""
     @objc dynamic var rate = getDefaultRate()
@@ -31,7 +31,7 @@ class PlayerScore: Object,Identifiable {
     @objc dynamic var olynpicAmount = 0
     @objc dynamic var draconNirconScore = 0
     @objc dynamic var draconNirconAmount = 0
-    @objc dynamic var roundDate = Date()
+    @objc dynamic var roundDate = ""
     
 }
 func getRoundData() -> RoundData {

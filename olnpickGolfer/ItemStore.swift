@@ -23,6 +23,7 @@
                 self.currentRoundData = realm.object(ofType: RoundData.self, forPrimaryKey: roundId)
             }
             itemResults = realm.objects(RoundData.self)
+            itemResults = itemResults.sorted(byKeyPath: "roundDate", ascending: false)
         }
         
         var items: [Item] {
@@ -36,6 +37,8 @@
         func historyToScoreBoard(roundid : String){
             self.currentRoundData = realm.object(ofType: RoundData.self, forPrimaryKey: roundid)
         }
+        
+        
     }
     
     extension ItemStore {

@@ -24,16 +24,9 @@ struct HistoryUIView: View {
                 ForEach(store.items) { item in
                     VStack{
                         HStack{
-                            Text(StringToDate(date: item.roundDate, format: "yyyy/MM/dd HH:MM:SS"))
-//                            print(item.roundDate)
+                            Text(item.roundDate.prefix(10))
                             Text("人数：" + String(item.peoples))
-                            
                             Text("収支：" + String(item.playerScoreList[0].olynpicAmount))
-//                            if item.playerScoreList[0].olynpicAmount >= 0 {
-//                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.blue))
-//                            }else{
-//                                Text("収支：" + String(item.playerScoreList[0].olynpicAmount).foregroundColor(.red))
-//                            }
                             Spacer()
                             Button("詳細") {
                                 store.historyToScoreBoard(roundid: item.roundId)
