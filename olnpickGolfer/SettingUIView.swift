@@ -22,8 +22,10 @@ struct SettingUIView: View {
                     HStack{
                         Text("ユーザ名：")
                         Spacer()
-                        TextField("ユーザー名", text: $username,onCommit:{
-                            setUserName(userName: username)
+                        TextField("ユーザー名", text: $username,onEditingChanged:{ isBegin in
+                            if !isBegin {
+                                setUserName(userName: username)
+                            }
                         })
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .multilineTextAlignment(.trailing)
@@ -33,8 +35,10 @@ struct SettingUIView: View {
                     HStack{
                         Text("初期レート：")
                         Spacer()
-                        TextField("レート", text: $initialRate,onCommit:{
-                            setDefaultRate(rate: Int(initialRate) ?? 0)
+                        TextField("レート", text: $initialRate,onEditingChanged:{ isBegin in
+                            if !isBegin {
+                                setDefaultRate(rate: Int(initialRate) ?? 0)
+                            }
                         })
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .multilineTextAlignment(.trailing)

@@ -20,27 +20,53 @@ struct UIControllerView: View {
             ZStack{
                 Color("Color_2")
                     .edgesIgnoringSafeArea(.all)
-                FirstSettingUIView(viewCode: $viewCode)
+                
+                VStack {
+                    FirstSettingUIView(viewCode: $viewCode)
+                    AdView()
+                }
             }
             
         case Const.inputNameViewCode :
-            MemberSelectUIView(viewCode: $viewCode)
+            VStack {
+                MemberSelectUIView(viewCode: $viewCode)
+                AdView()
+            }
             
         case Const.scoreBoardViewCode:
-            ParentScoreUIView(viewCode: $viewCode)
+            VStack {
+                ParentScoreUIView(viewCode: $viewCode)
+                AdView()
+            }
+            
             
         case Const.historyViewCode:
-            HistoryUIView(viewCode: $viewCode)
+            VStack {
+                HistoryUIView(viewCode: $viewCode)
+                Spacer()
+                AdView()
+            }
             
         case Const.settingViewCode:
-            SettingUIView(viewCode: $viewCode)
+
+                
+                VStack {
+                    SettingUIView(viewCode: $viewCode)
+                    AdView()
+                }
+                
+
             
         case Const.mainMenuViewCode:
             ZStack{
-                    Color("Color_2")
-                        .edgesIgnoringSafeArea(.all)
-                
-                MainMenuUIView(viewCode: $viewCode)
+                Color("Color_2")
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Spacer()
+                    MainMenuUIView(viewCode: $viewCode)
+                    Spacer()
+                    AdView()
+                }
             }
         default :
             MemberSelectUIView(viewCode: $viewCode)

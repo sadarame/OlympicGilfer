@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleMobileAds
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Mobile Ads SDKを初期化する
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        //FIREBASE初期化
+        FirebaseApp.configure()
         // Override point for customization after application launch.
         return true
     }

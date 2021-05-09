@@ -38,7 +38,7 @@
                     Text(playerScore.playerName)
                         .padding(.vertical)
                         .lineLimit(1)
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .font(.title2)
                     Spacer()
                     Button(action: {
                         // action

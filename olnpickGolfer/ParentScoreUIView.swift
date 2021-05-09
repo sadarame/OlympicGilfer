@@ -61,8 +61,10 @@ struct ParentScoreUIView: View {
             
             HStack(spacing:0){
                         Text("レート:").padding(.leading)
-                        TextField("", text: $rate,onCommit:{
-                            store.rateChange(rate: Int(rate) ?? 0)
+                        TextField("", text: $rate,onEditingChanged: { isBegin in
+                            if !isBegin {
+                                store.rateChange(rate: Int(rate) ?? 0)
+                            }
                         })
                             .onAppear {
                                 if String(store.currentRoundData!.rate) == "0" {
