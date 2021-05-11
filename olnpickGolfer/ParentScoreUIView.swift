@@ -96,6 +96,7 @@ struct ParentScoreUIView: View {
                                                             action: {
                                                                 setViewStatusCode(statusCode: Const.mainMenuViewCode)
                                                                 viewCode = Const.historyViewCode
+                                                                store.sort()
                                                             }))
                         }
                         .padding(.trailing)

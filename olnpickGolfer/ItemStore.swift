@@ -26,6 +26,10 @@
             itemResults = itemResults.sorted(byKeyPath: "roundDate", ascending: false)
         }
         
+        func sort (){
+            itemResults = itemResults.sorted(byKeyPath: "roundDate", ascending: false)
+        }
+        
         var items: [Item] {
             itemResults.map(Item.init)
         }
