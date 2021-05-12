@@ -45,7 +45,7 @@ struct FirstSettingUIView: View {
                     .cornerRadius(50)
                 TextField("\("未設定")", text: self.$userName)
                     .font(.largeTitle)
-                    .background(Color.white)
+                    .background(Color("Color_Dark"))
                     .padding()
                 Button(action: {viewStatus="3";setUserName(userName: userName)}, label: {Text("保存")})
                     .frame(width:100,height: 50)

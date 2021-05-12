@@ -148,9 +148,6 @@
                     .font(.system(.title, design: .monospaced))
                     .frame(width:50,alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .lineLimit(1)
-                    .onAppear() {
-                        print(playerScore.playerName)
-                    }
             }
             .background(Color("Color_Dark"))
             .border(Color("Color_Border"),width: 1)
