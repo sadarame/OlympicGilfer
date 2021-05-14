@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  olnpickGolfer
+
+  Created by Yosuke Yoshida on 2021/05/10.
+  
+*/
+
+
+/* Localized versions of Info.plist keys */
+CFBundleDisplayName = "オリンピック計算機";
